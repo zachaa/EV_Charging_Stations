@@ -1,0 +1,43 @@
+ID,Title,FormalName,IsDiscontinued,IsObsolete
+0,Unknown,Not Specified,,
+1,Type 1 (J1772),SAE J1772-2009,,
+2,CHAdeMO,IEC 62196-3 Configuration AA,,
+3,BS1363 3 Pin 13 Amp,BS1363 / Type G,,
+4,Blue Commando (2P+E),,,
+5,LP Inductive,Large Paddle Inductive,True,True
+6,SP Inductive,Small Paddle Inductive,True,True
+7,Avcon Connector,Avcon SAE J1772-2001,True,False
+8,Tesla (Roadster),Tesla Connector,True,False
+9,NEMA 5-20R,,False,False
+10,NEMA 14-30,,False,False
+11,NEMA 14-50,,False,False
+13,Europlug 2-Pin (CEE 7/16),Europlug 2-Pin (CEE 7/16),False,False
+14,NEMA 6-20,,False,False
+15,NEMA 6-15,,False,False
+16,CEE 3 Pin,,False,False
+17,CEE 5 Pin,,False,False
+18,CEE+ 7 Pin,,False,False
+21,XLR Plug (4 pin),,False,False
+22,NEMA 5-15R,NEMA 5-15R,False,False
+23,CEE 7/5,,False,False
+24,Wireless Charging,,False,False
+25,Type 2 (Socket Only),IEC 62196-2 Type 2,False,False
+26,SCAME Type 3C (Schneider-Legrand),IEC 62196-2 Type 3,False,False
+27,NACS / Tesla Supercharger,NACS,False,False
+28,CEE 7/4 - Schuko - Type F,CEE 7/4,False,False
+29,Type I (AS 3112),Type I/AS 3112/CPCS-CCC,False,False
+30,Tesla (Model S/X),,False,False
+31,Tesla Battery Swap,Tesla Battery Swap Station,False,False
+32,CCS (Type 1),IEC 62196-3 Configuration EE,False,False
+33,CCS (Type 2),IEC 62196-3 Configuration FF,False,False
+34,IEC 60309 3-pin,IEC 60309 3-pin,False,False
+35,IEC 60309 5-pin,IEC 60309 5-pin,False,False
+36,SCAME Type 3A (Low Power),,False,False
+1036,Type 2 (Tethered Connector) ,IEC 62196-2,False,False
+1037,T13 - SEC1011 ( Swiss domestic 3-pin ) - Type J,T13/ IEC Type J,False,False
+1038,GB-T AC - GB/T 20234.2 (Socket),GB-T AC - GB/T 20234.2 (Socket),False,False
+1039,GB-T AC - GB/T 20234.2 (Tethered Cable),GB-T AC - GB/T 20234.2 (Tethered Cable),False,False
+1040,GB-T DC - GB/T 20234.3,GB-T DC - GB/T 20234.3,False,False
+1041,Three Phase 5-Pin (AS/NZ 3123),AS/NZS 3123 Three Phase,False,False
+1042,NEMA TT-30R,,False,False
+1043,Type M,"IEC Type M (SANS 164-1, IS 1293:2005)",False,False
