@@ -18,6 +18,9 @@
 </head>
 <body>
   <div class="main_container">
+    <select id="selectState" onchange="optionChanged(this.value)">
+      <option value="USA">United States</option>
+    </select>
     <div class="plots_container">
       <div class="plot" id="plot1">
 
@@ -32,6 +35,7 @@
   </div>
   
   <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/states.js"></script>
   <script type="text/javascript" src="static/js/logic.js"></script>
 </body>
 </html>

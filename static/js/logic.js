@@ -1,6 +1,18 @@
 let fullData;
 
+function setSelectOptions() {
+    let dropDown = d3.select("#selectState");
+    states.forEach(state => {
+        dropDown.append("option")
+                .text(state.name)
+                .attr("value", state.abbreviation)
+    });
+}
+
+
 async function init() {
+    setSelectOptions();
+
     // Promises are messing me up, just use async await for full data
     fullData = await d3.json("/data/reduced_data.json");
 
@@ -98,6 +110,11 @@ function createLocationDataSubset(locationFilter) {
     }
 
     return bulkData
+}
+
+function optionChanged(value) {
+    console.log("Value changed to:", value);
+    // updateCharts(value);
 }
 
 
