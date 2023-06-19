@@ -45,12 +45,12 @@ async function init() {
         marker: {colors:[
             "#aaaaaa",  // Unknown
             "#02e815",  // Public
-            "#c100d6",  // Private - Restricted Access
-            "#c9063d",  // Privately Owned
-            "#00d6c1",  // Public - Membership
-            "#00d692",  // Public - Pay
-            "#f26d00",  // Private - Customers
-            "#00a32c",  // Public - Notice
+            "#D20000",  // Private - Restricted Access
+            "#D300C9",  // Privately Owned
+            "#0096E1",  // Public - Membership
+            "#001EE2",  // Public - Pay
+            "#FF7300",  // Private - Customers
+            "#00F8D2",  // Public - Notice
         ]},
         type: "pie"
     }];
