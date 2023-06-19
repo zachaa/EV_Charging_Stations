@@ -1,0 +1,11 @@
+ID,Title,IsOperational
+0,Unknown,
+10,Currently Available (Automated Status),True
+20,Currently In Use (Automated Status),True
+30,Temporarily Unavailable,True
+50,Operational,True
+75,Partly Operational (Mixed),True
+100,Not Operational,False
+150,Planned For Future Date,False
+200,Removed (Decommissioned),False
+210,Removed (Duplicate Listing),False

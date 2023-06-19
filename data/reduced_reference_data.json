@@ -1,0 +1,4434 @@
+{
+  "ConnectionTypes": [
+    {
+      "ID": 0,
+      "Title": "Unknown",
+      "FormalName": "Not Specified",
+      "IsDiscontinued": null,
+      "IsObsolete": null
+    },
+    {
+      "ID": 1,
+      "Title": "Type 1 (J1772)",
+      "FormalName": "SAE J1772-2009",
+      "IsDiscontinued": null,
+      "IsObsolete": null
+    },
+    {
+      "ID": 2,
+      "Title": "CHAdeMO",
+      "FormalName": "IEC 62196-3 Configuration AA",
+      "IsDiscontinued": null,
+      "IsObsolete": null
+    },
+    {
+      "ID": 3,
+      "Title": "BS1363 3 Pin 13 Amp",
+      "FormalName": "BS1363 / Type G",
+      "IsDiscontinued": null,
+      "IsObsolete": null
+    },
+    {
+      "ID": 4,
+      "Title": "Blue Commando (2P+E)",
+      "FormalName": null,
+      "IsDiscontinued": null,
+      "IsObsolete": null
+    },
+    {
+      "ID": 5,
+      "Title": "LP Inductive",
+      "FormalName": "Large Paddle Inductive",
+      "IsDiscontinued": true,
+      "IsObsolete": true
+    },
+    {
+      "ID": 6,
+      "Title": "SP Inductive",
+      "FormalName": "Small Paddle Inductive",
+      "IsDiscontinued": true,
+      "IsObsolete": true
+    },
+    {
+      "ID": 7,
+      "Title": "Avcon Connector",
+      "FormalName": "Avcon SAE J1772-2001",
+      "IsDiscontinued": true,
+      "IsObsolete": false
+    },
+    {
+      "ID": 8,
+      "Title": "Tesla (Roadster)",
+      "FormalName": "Tesla Connector",
+      "IsDiscontinued": true,
+      "IsObsolete": false
+    },
+    {
+      "ID": 9,
+      "Title": "NEMA 5-20R",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 10,
+      "Title": "NEMA 14-30",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 11,
+      "Title": "NEMA 14-50",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 13,
+      "Title": "Europlug 2-Pin (CEE 7/16)",
+      "FormalName": "Europlug 2-Pin (CEE 7/16)",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 14,
+      "Title": "NEMA 6-20",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 15,
+      "Title": "NEMA 6-15",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 16,
+      "Title": "CEE 3 Pin",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 17,
+      "Title": "CEE 5 Pin",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 18,
+      "Title": "CEE+ 7 Pin",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 21,
+      "Title": "XLR Plug (4 pin)",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 22,
+      "Title": "NEMA 5-15R",
+      "FormalName": "NEMA 5-15R",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 23,
+      "Title": "CEE 7/5",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 24,
+      "Title": "Wireless Charging",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 25,
+      "Title": "Type 2 (Socket Only)",
+      "FormalName": "IEC 62196-2 Type 2",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 26,
+      "Title": "SCAME Type 3C (Schneider-Legrand)",
+      "FormalName": "IEC 62196-2 Type 3",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 27,
+      "Title": "NACS / Tesla Supercharger",
+      "FormalName": "NACS",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 28,
+      "Title": "CEE 7/4 - Schuko - Type F",
+      "FormalName": "CEE 7/4",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 29,
+      "Title": "Type I (AS 3112)",
+      "FormalName": "Type I/AS 3112/CPCS-CCC",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 30,
+      "Title": "Tesla (Model S/X)",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 31,
+      "Title": "Tesla Battery Swap",
+      "FormalName": "Tesla Battery Swap Station",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 32,
+      "Title": "CCS (Type 1)",
+      "FormalName": "IEC 62196-3 Configuration EE",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 33,
+      "Title": "CCS (Type 2)",
+      "FormalName": "IEC 62196-3 Configuration FF",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 34,
+      "Title": "IEC 60309 3-pin",
+      "FormalName": "IEC 60309 3-pin",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 35,
+      "Title": "IEC 60309 5-pin",
+      "FormalName": "IEC 60309 5-pin",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 36,
+      "Title": "SCAME Type 3A (Low Power)",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1036,
+      "Title": "Type 2 (Tethered Connector) ",
+      "FormalName": "IEC 62196-2",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1037,
+      "Title": "T13 - SEC1011 ( Swiss domestic 3-pin ) - Type J",
+      "FormalName": "T13/ IEC Type J",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1038,
+      "Title": "GB-T AC - GB/T 20234.2 (Socket)",
+      "FormalName": "GB-T AC - GB/T 20234.2 (Socket)",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1039,
+      "Title": "GB-T AC - GB/T 20234.2 (Tethered Cable)",
+      "FormalName": "GB-T AC - GB/T 20234.2 (Tethered Cable)",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1040,
+      "Title": "GB-T DC - GB/T 20234.3",
+      "FormalName": "GB-T DC - GB/T 20234.3",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1041,
+      "Title": "Three Phase 5-Pin (AS/NZ 3123)",
+      "FormalName": "AS/NZS 3123 Three Phase",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1042,
+      "Title": "NEMA TT-30R",
+      "FormalName": null,
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    },
+    {
+      "ID": 1043,
+      "Title": "Type M",
+      "FormalName": "IEC Type M (SANS 164-1, IS 1293:2005)",
+      "IsDiscontinued": false,
+      "IsObsolete": false
+    }
+  ],
+  "CurrentTypes": [
+    {
+      "ID": 10,
+      "Title": "AC (Single-Phase)",
+      "Description": "Alternating Current - Single Phase"
+    },
+    {
+      "ID": 20,
+      "Title": "AC (Three-Phase)",
+      "Description": "Alternating Current - Three Phase"
+    },
+    {
+      "ID": 30,
+      "Title": "DC",
+      "Description": "Direct Current"
+    },
+    {
+      "ID": 0,
+      "Title": "Unknown",
+      "Description": "Not Given"
+    }
+  ],
+  "OperatorTypes": [
+    {
+      "ID": 1,
+      "Title": "(Unknown Operator)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 2,
+      "Title": "Elektrobay (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3,
+      "Title": "POD Point (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "Part of Groupe EDF"
+    },
+    {
+      "ID": 5,
+      "Title": "ChargePoint",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 6,
+      "Title": "Nissan US Dealer Network",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 7,
+      "Title": "Nissan UK Dealer Network",
+      "IsPrivateIndividual": false,
+      "Comments": "Network of franchised Nissan Dealers"
+    },
+    {
+      "ID": 8,
+      "Title": "Chargemaster",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 9,
+      "Title": "Blink Network/ECOtality",
+      "IsPrivateIndividual": false,
+      "Comments": "Membership based charging network, part of Car Charging Group, inc."
+    },
+    {
+      "ID": 11,
+      "Title": "EVSE LLC WebNet",
+      "IsPrivateIndividual": false,
+      "Comments": "Imported by ADFC import"
+    },
+    {
+      "ID": 12,
+      "Title": "RechargeAccess",
+      "IsPrivateIndividual": false,
+      "Comments": "Imported by ADFC import"
+    },
+    {
+      "ID": 13,
+      "Title": "PETROL",
+      "IsPrivateIndividual": false,
+      "Comments": "PETROL is a fuel supplier and runs charge points in Slovenia, part of the CENTRAL EUROPEAN GREEN CORRIDORS (CEGC) PROJECT"
+    },
+    {
+      "ID": 14,
+      "Title": "Shorepower",
+      "IsPrivateIndividual": false,
+      "Comments": "Imported by ADFC import"
+    },
+    {
+      "ID": 15,
+      "Title": "eVgo Network",
+      "IsPrivateIndividual": false,
+      "Comments": "Imported by ADFC import"
+    },
+    {
+      "ID": 16,
+      "Title": "Elektromotive (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 18,
+      "Title": "TIWAG Tiroler Wasserkraft AG (AT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 19,
+      "Title": "Zero Carbon World",
+      "IsPrivateIndividual": false,
+      "Comments": "UK Charity promoting carbon reduction"
+    },
+    {
+      "ID": 20,
+      "Title": "Charge Your Car",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 21,
+      "Title": "Mobie.pt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 22,
+      "Title": "ESB Ecars",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 23,
+      "Title": "Tesla (Tesla-only charging)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 24,
+      "Title": "Electric Highway (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "Formerly known as the Ecotricity Electric Highway"
+    },
+    {
+      "ID": 25,
+      "Title": "Source London",
+      "IsPrivateIndividual": false,
+      "Comments": "Monthly post-payment membership system, with per-minute billing and optional lower tariffs in return for monthly subscription payment."
+    },
+    {
+      "ID": 26,
+      "Title": "AeroVironment",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 28,
+      "Title": "WEL Networks Ltd",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 29,
+      "Title": "e-Laad",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 31,
+      "Title": "Clipper Creek",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 32,
+      "Title": "BP Pulse (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "Formerly known as Polar Network, or BP Chargemaster"
+    },
+    {
+      "ID": 33,
+      "Title": "SDEY (Fr)",
+      "IsPrivateIndividual": false,
+      "Comments": "Syndicat D\u00e9partemental d'\u00c9nergies de l'Yonne"
+    },
+    {
+      "ID": 34,
+      "Title": "Westar Energy ElectroGo",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 35,
+      "Title": "ThePluginCompany (Belgium)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 36,
+      "Title": "Blue Corner (Belgium)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 38,
+      "Title": "Lidl",
+      "IsPrivateIndividual": false,
+      "Comments": "Belgian charging network"
+    },
+    {
+      "ID": 39,
+      "Title": "SemaConnect",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 41,
+      "Title": "MAGNE Charge",
+      "IsPrivateIndividual": false,
+      "Comments": "Obsolete inductive paddle charging standard"
+    },
+    {
+      "ID": 42,
+      "Title": "EATON",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 43,
+      "Title": "AVCON",
+      "IsPrivateIndividual": false,
+      "Comments": "Obsolete inductive paddle charging"
+    },
+    {
+      "ID": 44,
+      "Title": "(Private Residence/Individual)",
+      "IsPrivateIndividual": true,
+      "Comments": "For use when the operator is a home owner or private individual making their own facilities available to the public"
+    },
+    {
+      "ID": 45,
+      "Title": "(Business Owner at Location)",
+      "IsPrivateIndividual": false,
+      "Comments": "For use when the operator of the equipment is a single business owner connected to the location and equipment is not part of a larger network"
+    },
+    {
+      "ID": 46,
+      "Title": "E.ON (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 47,
+      "Title": "Shell Recharge Solutions (NL)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 48,
+      "Title": "RWE Mobility/Essent",
+      "IsPrivateIndividual": null,
+      "Comments": "Essent is part of the RWE group"
+    },
+    {
+      "ID": 49,
+      "Title": "EV-Point",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 50,
+      "Title": "Volta Charging",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 51,
+      "Title": "Sun Country Highway",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 52,
+      "Title": "Enovos",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 53,
+      "Title": "Autolib (Paris)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 54,
+      "Title": "ZE-MO (Be)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 55,
+      "Title": "e-totem",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 56,
+      "Title": "Auto Bleue",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 57,
+      "Title": "The REV Project (UWA - Australia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 59,
+      "Title": "Shell Recharge Solutions (US)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 60,
+      "Title": "Source East (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "Defunct network."
+    },
+    {
+      "ID": 61,
+      "Title": "Vitaemobility",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 62,
+      "Title": "KiWhi Pass",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 63,
+      "Title": "Greenflux",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 64,
+      "Title": "Ultra-Fast",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 65,
+      "Title": "UWAG",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 66,
+      "Title": "Drehstromnetz",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 67,
+      "Title": "ElectroDrive",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 68,
+      "Title": "Empora",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 69,
+      "Title": "ladenetz.de",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 70,
+      "Title": "E\u015farj (TR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 71,
+      "Title": "Plugged In Midlands (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 72,
+      "Title": "RheinEnergie AG",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 73,
+      "Title": "EV-Box",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 74,
+      "Title": "FastNed",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 76,
+      "Title": "ELMO",
+      "IsPrivateIndividual": null,
+      "Comments": "When calling 651 1911 the price of the call depends on the selected service package. When calling 1911, the price of the call is 0.23 euros (including VAT). The price of content service of calls to call service numbers does not depend on the service package of a customer; it is the same for all callers."
+    },
+    {
+      "ID": 77,
+      "Title": "Ecoplug",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 78,
+      "Title": "Essent (NL)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 79,
+      "Title": "Mobib (Belgium)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 80,
+      "Title": "Enel X",
+      "IsPrivateIndividual": false,
+      "Comments": "IT*ELX"
+    },
+    {
+      "ID": 81,
+      "Title": "Silfi (Italy)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 82,
+      "Title": "E-moving (Italy)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 83,
+      "Title": "Ecospazio (Italy)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 84,
+      "Title": "Green Land Mobility (Italy)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 85,
+      "Title": "FORTISIS",
+      "IsPrivateIndividual": false,
+      "Comments": "Operator based on Greence and Cyprus"
+    },
+    {
+      "ID": 86,
+      "Title": "EnBW (D)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 87,
+      "Title": "EVbility (Italy)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 88,
+      "Title": "Greenway",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 89,
+      "Title": "flo",
+      "IsPrivateIndividual": false,
+      "Comments": "R\u00e9seauVER / VERnetwork        http://www.reseauver.com/          (877) 505-2674          service@reseauver.com"
+    },
+    {
+      "ID": 90,
+      "Title": "Circuit Electrique",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 91,
+      "Title": "Repsol - Ibil (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 92,
+      "Title": "MobecPoint (Es)",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 93,
+      "Title": "E-Car",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 94,
+      "Title": "BeCharged",
+      "IsPrivateIndividual": null,
+      "Comments": null
+    },
+    {
+      "ID": 95,
+      "Title": "Helsingin Energia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 96,
+      "Title": "ChargeLounge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 97,
+      "Title": "Park & Charge (CH)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 98,
+      "Title": "Park & Charge (D)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 99,
+      "Title": "Vlotte",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 100,
+      "Title": "ZenCar",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 101,
+      "Title": "ChargeIT mobility",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 102,
+      "Title": "Orka N\u00e1tt\u00farunnar",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 103,
+      "Title": "Allego BV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 104,
+      "Title": "RWE / Npower",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 105,
+      "Title": "Innogy SE (RWE eMobility)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 106,
+      "Title": "Ladefoxx",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 107,
+      "Title": "OpConnect",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 108,
+      "Title": "Vattenfall InCharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 109,
+      "Title": "EWR gmbh e-mobile",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 110,
+      "Title": "EVite (ch)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 111,
+      "Title": "Hong Kong EV Power",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 112,
+      "Title": "MisterGreen, The Fast Charger Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 113,
+      "Title": "S\u00e4hk\u00f6inenliikenne (fi)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 114,
+      "Title": "Power Station",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 115,
+      "Title": "\u010cEZ",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 116,
+      "Title": "G2mobility",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 118,
+      "Title": "AGSM Electrify Verona",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 119,
+      "Title": "Plug-In North Central Washington",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 120,
+      "Title": "JuicePoint",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 121,
+      "Title": "EnerCity",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 122,
+      "Title": "Harz Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 123,
+      "Title": "Stadtwerke L\u00fcbeck",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 124,
+      "Title": "Osterholzer Stadtwerke",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 125,
+      "Title": "SWB / EWE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 126,
+      "Title": "VR Schneller-Strom-tanken",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 127,
+      "Title": "EWE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 128,
+      "Title": "LSW Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 129,
+      "Title": "BS Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 130,
+      "Title": "Stadtwerke Wernigerode",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 131,
+      "Title": "Stadtwerke Northeim  SWN",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 132,
+      "Title": "Stadtwerke G\u00f6ttingen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 133,
+      "Title": "Rauman Energia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 134,
+      "Title": "Stadtwerke Verden",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 135,
+      "Title": "Manx Electricity Authority",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 136,
+      "Title": "VIRTA",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 137,
+      "Title": "EVS Energieversorgung Sylt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 138,
+      "Title": "SUN Stadtwerke Union Nordhessen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 139,
+      "Title": "Schleswiger Stadtwerke",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 140,
+      "Title": "EAM",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 141,
+      "Title": "ElectroDrive Salzburg",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 142,
+      "Title": "TANKE Wien Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 143,
+      "Title": "Stadtwerke Rinteln",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 144,
+      "Title": "Versorgungsbetriebe Hann. M\u00fcnden",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 145,
+      "Title": "EWI  Energiewerke Isernhagen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 146,
+      "Title": "Stadtwerke Hameln",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 147,
+      "Title": "Stadtwerke Neum\u00fcnster (SWN).",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 148,
+      "Title": "Stadtwerke Haldensleben  SWH",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 149,
+      "Title": "Stadtwerke Soest",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 150,
+      "Title": "The GeniePoint Network ( EQUANS EV Solutions )",
+      "IsPrivateIndividual": false,
+      "Comments": "also known as Revive, Engie EV Solutions regional branding"
+    },
+    {
+      "ID": 151,
+      "Title": "Stadtwerke Grevesm\u00fchlen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 152,
+      "Title": "St\u00e4dtische Werke Magdeburg",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 153,
+      "Title": "Stadtwerke Strahlsund",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 154,
+      "Title": "Stadtwerke Rostock",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 155,
+      "Title": "Stadtwerke Leipzig SWL",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 156,
+      "Title": "Shell Recharge Solutions (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 157,
+      "Title": "Shell Recharge Solutions (BE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 158,
+      "Title": "Stadtwerke Dessau",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 159,
+      "Title": "Stadtwerke Wittenberg",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 160,
+      "Title": "StromTicket",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 161,
+      "Title": "Stadtwerke Halle",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 162,
+      "Title": "Stadtwerke Clausthal-Zellerfeld",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 163,
+      "Title": "GGEW",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 164,
+      "Title": "Neogy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 165,
+      "Title": "Mainova",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 166,
+      "Title": "Stadtwerke Wolfenb\u00fcttel",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 167,
+      "Title": "Nissan DE Freistrom",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 169,
+      "Title": "Stadtwerke Uetersen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 170,
+      "Title": "Stadtwerke Elmshorn",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 171,
+      "Title": "EEW Duderstadt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 172,
+      "Title": "ENEWA",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 173,
+      "Title": "ChargeNow",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 174,
+      "Title": "TOTAL Nl PlugToDrive",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 175,
+      "Title": "TOTAL Be PlugToDrive",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 176,
+      "Title": "ZEAG Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 177,
+      "Title": "Nuon",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 178,
+      "Title": "EVnetNL",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 179,
+      "Title": "Ecotap",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 180,
+      "Title": "Alfen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 181,
+      "Title": "eNovates",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 182,
+      "Title": "Latvenergo",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 183,
+      "Title": "Wirtschaftsbetriebe Stadt Nienburg",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 184,
+      "Title": "ElectroDrive/Mark-E (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 185,
+      "Title": "CLEVER",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 186,
+      "Title": "Azra Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 187,
+      "Title": "ELM\u0170",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 188,
+      "Title": "OVAG Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 189,
+      "Title": "E-Wald",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 190,
+      "Title": "PRE (cz)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 191,
+      "Title": "inChaNet",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 192,
+      "Title": "E.ON (CZ)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 193,
+      "Title": "VSE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 194,
+      "Title": "RAC Electric Highway/ChargeStar",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 195,
+      "Title": "Werraenergie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 196,
+      "Title": "Nomadpower",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 197,
+      "Title": "FLOW Charging",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 198,
+      "Title": "Recharge (Formerly Fortum Charge & Drive)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 199,
+      "Title": "EDP MOP",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 200,
+      "Title": "PRIOE",
+      "IsPrivateIndividual": false,
+      "Comments": "Prio.E Mobility Solutions"
+    },
+    {
+      "ID": 201,
+      "Title": "M\u00fcnchen Umland",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 202,
+      "Title": "Charge & Drive (Fortum - NO)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 203,
+      "Title": "Osprey Charging",
+      "IsPrivateIndividual": false,
+      "Comments": "GB*OSP,formerly known as Engenie"
+    },
+    {
+      "ID": 204,
+      "Title": "GardaUno",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 205,
+      "Title": "Estonteca",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 206,
+      "Title": "LIVE Barcelona",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 207,
+      "Title": "Endesa",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 208,
+      "Title": "eDrop",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 209,
+      "Title": "Estabanell Energia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 210,
+      "Title": "GIC",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 211,
+      "Title": "sofos",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 212,
+      "Title": "Amersam",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 213,
+      "Title": "Izivia (Sodetrel)",
+      "IsPrivateIndividual": false,
+      "Comments": "Formerly known as Sodetrel"
+    },
+    {
+      "ID": 214,
+      "Title": "be emobil",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 215,
+      "Title": "Charge & Fuel",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 216,
+      "Title": "Enspirion",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 217,
+      "Title": "RCS (Revitalize Charging Solutions)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 218,
+      "Title": "Galactico.pl",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 219,
+      "Title": "Energieversorgung Buching-Trauchgau",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 220,
+      "Title": "Stromnetz Hamburg",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 221,
+      "Title": "Evmapa (CZ)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 222,
+      "Title": "ETOP",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 223,
+      "Title": "Schnell Laden Berlin",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 224,
+      "Title": "EnergieDienst",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 225,
+      "Title": "Stadtwerke M\u00fcnster",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 226,
+      "Title": "Green Frontiers (lk)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 227,
+      "Title": "chargeNET (lk)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 228,
+      "Title": "Spark EV (lk)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 229,
+      "Title": "ChargeNet NZ",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 231,
+      "Title": "Vibrate",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 232,
+      "Title": "electric-driving.colruytgroup.com",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 233,
+      "Title": "Vector (NZ)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 234,
+      "Title": "N-ERGIE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 235,
+      "Title": "Stadtwerke D\u00fcsseldorf AG",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1235,
+      "Title": "Belib\u2019",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1236,
+      "Title": "ORES",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1237,
+      "Title": "Viesgo (Spain)",
+      "IsPrivateIndividual": false,
+      "Comments": "Formerly known as E.ON Energ\u00eda"
+    },
+    {
+      "ID": 1238,
+      "Title": "emma",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1239,
+      "Title": "Polyfazer (CZ)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1240,
+      "Title": "Pfalzwerke",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1241,
+      "Title": "EasyGO (aka Carcharger.ie)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 1242,
+      "Title": "GE WattStation (No longer active)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2241,
+      "Title": "EWB",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2242,
+      "Title": "Rh\u00f6nEnergie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2243,
+      "Title": "eins",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2244,
+      "Title": "ubitricity",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2245,
+      "Title": "Schwabencard",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2246,
+      "Title": "Slovensk\u00e9 elektr\u00e1rne",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 2247,
+      "Title": "Iberdrola",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3247,
+      "Title": "Gr\u00f8nn Kontakt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3248,
+      "Title": "Tank & Rast",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3249,
+      "Title": "Ume\u00e5 Energi",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3250,
+      "Title": "RPSnet",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3251,
+      "Title": "E.ON (DK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3252,
+      "Title": "NRG EVgo",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3253,
+      "Title": "SMATRICS Netz",
+      "IsPrivateIndividual": false,
+      "Comments": "SMATRICS runs charge points in Austria and Germany, part of the CENTRAL EUROPEAN GREEN CORRIDORS (CEGC) PROJECT"
+    },
+    {
+      "ID": 3254,
+      "Title": "Evd Dormagen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3255,
+      "Title": "SODO",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3256,
+      "Title": "USEDA (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3257,
+      "Title": "R\u00e9v\u00e9o (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": "Sud de la France"
+    },
+    {
+      "ID": 3258,
+      "Title": "Elektro Ljublana",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3259,
+      "Title": "ZSE Drive",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3260,
+      "Title": "Energie der Eifel",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3261,
+      "Title": "Be Energised (has-to-be)",
+      "IsPrivateIndividual": false,
+      "Comments": "also known as has.to.be"
+    },
+    {
+      "ID": 3262,
+      "Title": "SDE76 (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": "Can be Accessed via Sodetrel pass"
+    },
+    {
+      "ID": 3263,
+      "Title": "DEWA",
+      "IsPrivateIndividual": false,
+      "Comments": "Dubai Electricity and Water Authority (DEWA)"
+    },
+    {
+      "ID": 3264,
+      "Title": "EE-Mobil",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3265,
+      "Title": "REWAG",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3266,
+      "Title": "PlugSurfing",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3267,
+      "Title": "Duferco Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3268,
+      "Title": "Belorusneft",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3269,
+      "Title": "Stromtreter",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3270,
+      "Title": "Stromtreter",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3271,
+      "Title": "e-Charge (Romania)",
+      "IsPrivateIndividual": false,
+      "Comments": "Renovatio E-Charge"
+    },
+    {
+      "ID": 3272,
+      "Title": "EVPass (CH)",
+      "IsPrivateIndividual": false,
+      "Comments": "Android & IOS Apps, Swisspass travel RFID can be registered"
+    },
+    {
+      "ID": 3273,
+      "Title": "Swisscharge (CH)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3274,
+      "Title": "MOVE (CH)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3275,
+      "Title": "Renault",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3276,
+      "Title": "EDP",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3277,
+      "Title": "Syane",
+      "IsPrivateIndividual": false,
+      "Comments": "Syndicat des \u00e9nergies et de l'am\u00e9ngement num\u00e9rique de la Haute-Savoie"
+    },
+    {
+      "ID": 3278,
+      "Title": "Urbener Energ\u00eda",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3279,
+      "Title": "Fenie Energ\u00eda (Spain)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3280,
+      "Title": "Plug n Roll",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3281,
+      "Title": "Effia",
+      "IsPrivateIndividual": false,
+      "Comments": "Resaplace Parking"
+    },
+    {
+      "ID": 3282,
+      "Title": "Emobitaly (Italy)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3283,
+      "Title": "MELIB (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3284,
+      "Title": "autoPilDYK",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3285,
+      "Title": "Kelag AG",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3286,
+      "Title": "Lenenergo",
+      "IsPrivateIndividual": false,
+      "Comments": "Utility in St. Petersburg, Russia"
+    },
+    {
+      "ID": 3287,
+      "Title": "Ella",
+      "IsPrivateIndividual": false,
+      "Comments": "uses the Be Energised backend"
+    },
+    {
+      "ID": 3288,
+      "Title": "Jersey Electricity Evolve",
+      "IsPrivateIndividual": false,
+      "Comments": "Access via mechanical keyswitch, montly subscription fee."
+    },
+    {
+      "ID": 3289,
+      "Title": "MVM Partner Zrt.",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3290,
+      "Title": "State Grid Corporation of China (SGCC)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3291,
+      "Title": "Evway",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3292,
+      "Title": "Badenova (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3293,
+      "Title": "Revolta Egypt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3294,
+      "Title": "EAC e-charge",
+      "IsPrivateIndividual": false,
+      "Comments": "Electricity Authority of Cyprus"
+    },
+    {
+      "ID": 3295,
+      "Title": "evcharge.online",
+      "IsPrivateIndividual": false,
+      "Comments": "Rolec. Pre-payment, minimum topup \u00a35.00"
+    },
+    {
+      "ID": 3296,
+      "Title": "InstaVolt Ltd",
+      "IsPrivateIndividual": false,
+      "Comments": "Pay-as-you-go, charged per kWh, contactless bank card payment."
+    },
+    {
+      "ID": 3297,
+      "Title": "Entega",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3298,
+      "Title": "EO Charging",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3299,
+      "Title": "Ionity",
+      "IsPrivateIndividual": false,
+      "Comments": "Pan-European High-power CCS charging network joint venture of BMW Group, Daimler AG, Ford Motor Company and the Volkswagen Group"
+    },
+    {
+      "ID": 3300,
+      "Title": "YPF",
+      "IsPrivateIndividual": false,
+      "Comments": "Energy company based in Argentina"
+    },
+    {
+      "ID": 3301,
+      "Title": "\u041c\u041e\u042d\u0421\u041a (Russia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3302,
+      "Title": "Easypark",
+      "IsPrivateIndividual": false,
+      "Comments": "Parking operator, EV chargers activated by mobile phone app"
+    },
+    {
+      "ID": 3303,
+      "Title": "Avacon",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3304,
+      "Title": "Celsia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3305,
+      "Title": "AMB (\u00c0rea metropolitana de Barcelona)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3306,
+      "Title": "Tren\u010diansky samospr\u00e1vny kraj",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3307,
+      "Title": "NKM mobiliti",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3308,
+      "Title": "SIEL",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3309,
+      "Title": "echargenet - State Grid Corportation of China",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3310,
+      "Title": "Chargestar (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3311,
+      "Title": "Elen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3312,
+      "Title": "EDF",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3313,
+      "Title": "GOFAST (Gotthard Fastcharge)",
+      "IsPrivateIndividual": false,
+      "Comments": "Accepts Hubject roaming partners of Swisscharge"
+    },
+    {
+      "ID": 3314,
+      "Title": "Easy4You",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3315,
+      "Title": "Chargeplace Scotland",
+      "IsPrivateIndividual": false,
+      "Comments": "Operated by SWARCO on behalf of Transport Scotland. CYC cards/app accepted"
+    },
+    {
+      "ID": 3316,
+      "Title": "Drive Eco",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3317,
+      "Title": "Queensland Electric Super Highway",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3318,
+      "Title": "Electrify America",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3319,
+      "Title": "E-Mobi",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3320,
+      "Title": "da emobil",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3321,
+      "Title": "Chargy (LU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3322,
+      "Title": "Parking Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3323,
+      "Title": "ZES",
+      "IsPrivateIndividual": false,
+      "Comments": "Zorlu Energy Solutions, Turkey"
+    },
+    {
+      "ID": 3324,
+      "Title": "Zunder",
+      "IsPrivateIndividual": false,
+      "Comments": "formerly known as EasyCharger"
+    },
+    {
+      "ID": 3325,
+      "Title": "EWP : Energie und Wasser Potsdam GmbH",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3326,
+      "Title": "Alfapower (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3327,
+      "Title": "Be Charge (Italy)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3328,
+      "Title": "ZapGrid",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3329,
+      "Title": "SpotLink \u2013 e.motion",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3330,
+      "Title": "Repower (Italy)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3331,
+      "Title": "BLUETORINO",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3332,
+      "Title": "Driwe",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3333,
+      "Title": "AAE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3334,
+      "Title": "Gnrgy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3335,
+      "Title": "RedePiloto",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3336,
+      "Title": "Aliz\u00e9",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3338,
+      "Title": "chargEV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3339,
+      "Title": "Chargefox",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3340,
+      "Title": "Veolia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3341,
+      "Title": "Swarco E.Connect",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3342,
+      "Title": "Ekomobil",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3343,
+      "Title": "Incharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3344,
+      "Title": "YASNO E-mobility",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3345,
+      "Title": "Char.gy",
+      "IsPrivateIndividual": false,
+      "Comments": "different organisation to similarly named organisation in Luxembourg"
+    },
+    {
+      "ID": 3346,
+      "Title": "Noodoe EV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3347,
+      "Title": "Seom",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3348,
+      "Title": "Level2.ee",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3349,
+      "Title": "City EV",
+      "IsPrivateIndividual": false,
+      "Comments": "Lamp post mounted chargers, plugsurfing RFID or app"
+    },
+    {
+      "ID": 3350,
+      "Title": "\u0415\u0412\u041d (EVN) (Macedonia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3351,
+      "Title": "EVL (de)",
+      "IsPrivateIndividual": false,
+      "Comments": "Uses NewMotion backend"
+    },
+    {
+      "ID": 3352,
+      "Title": "Axpo Energy Solutions Italia",
+      "IsPrivateIndividual": false,
+      "Comments": "IT*AXP"
+    },
+    {
+      "ID": 3353,
+      "Title": "Plugit",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3354,
+      "Title": "K Lataus",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3355,
+      "Title": "Motolataus",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3356,
+      "Title": "Hubsta",
+      "IsPrivateIndividual": false,
+      "Comments": "UK*HUB*"
+    },
+    {
+      "ID": 3357,
+      "Title": "ESB Energy (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "Distinct network from the one they operate on the island of Ireland"
+    },
+    {
+      "ID": 3358,
+      "Title": "Putevi Srbije / \u0408\u041f \u041f\u0443\u0442\u0435\u0432\u0438 \u0421\u0440\u0431\u0438\u0458\u0435 / Roads of Serbia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3359,
+      "Title": "E.ON (HU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3360,
+      "Title": "CNR (Compagnie Nationale du Rh\u00f4ne)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3361,
+      "Title": "Toka Energy",
+      "IsPrivateIndividual": false,
+      "Comments": "\u0417\u0410\u0420\u042f\u0414\u041d\u042b\u0415 \u0421\u0422\u0410\u041d\u0426\u0418\u0418 \u0422\u041e\u041a\u0410, Based in Ukraine"
+    },
+    {
+      "ID": 3362,
+      "Title": "Autoenterprise / \u0410\u0432\u0442\u043e\u042d\u043d\u0442\u0435\u0440\u043f\u0440\u0430\u0439\u0437",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3363,
+      "Title": "Midgard Electric",
+      "IsPrivateIndividual": false,
+      "Comments": "Bangalore"
+    },
+    {
+      "ID": 3364,
+      "Title": "Copec Voltex",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3365,
+      "Title": "NBP eCharge Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3366,
+      "Title": "Tonik Energy",
+      "IsPrivateIndividual": false,
+      "Comments": "Accepts Fortum Charge & Drive"
+    },
+    {
+      "ID": 3367,
+      "Title": "Sharz.Net",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3368,
+      "Title": "Elocity",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3369,
+      "Title": "Comfortcharge",
+      "IsPrivateIndividual": false,
+      "Comments": "Deutsche Telekom Comfortcharge"
+    },
+    {
+      "ID": 3370,
+      "Title": "Enerhub",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3371,
+      "Title": "Wenea",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3372,
+      "Title": "EV Connect",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3373,
+      "Title": "Webasto",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3374,
+      "Title": "ChargeGrid",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3375,
+      "Title": "Petro Canada",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3376,
+      "Title": "SAEV",
+      "IsPrivateIndividual": false,
+      "Comments": "India"
+    },
+    {
+      "ID": 3377,
+      "Title": "eTecnic",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3378,
+      "Title": "MOL",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3379,
+      "Title": "Freshmile",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3380,
+      "Title": "SDEG 16 (Syndicat D\u00e9partemental d'Electricit\u00e9 et de Gaz de la Charente)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3382,
+      "Title": "Wroom",
+      "IsPrivateIndividual": false,
+      "Comments": "App based access"
+    },
+    {
+      "ID": 3383,
+      "Title": "AlterBase - Sor\u00e9gies (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3384,
+      "Title": "Hrvatski Telekom",
+      "IsPrivateIndividual": false,
+      "Comments": "Primarily a telco, but operates some EV chargepoints"
+    },
+    {
+      "ID": 3385,
+      "Title": "BC Hydro",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3386,
+      "Title": "GridCars",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3387,
+      "Title": "Last Mile Solutions",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3388,
+      "Title": "NRMA",
+      "IsPrivateIndividual": false,
+      "Comments": "National Roads and Motorists' Association, Australia"
+    },
+    {
+      "ID": 3389,
+      "Title": "EVGateway",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3390,
+      "Title": "Electroukraine",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3391,
+      "Title": "EB Charging",
+      "IsPrivateIndividual": false,
+      "Comments": "owned by Blink Charging"
+    },
+    {
+      "ID": 3392,
+      "Title": "Shell Recharge Solutions (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "Shell Recharge"
+    },
+    {
+      "ID": 3393,
+      "Title": "Joju Ltd",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3394,
+      "Title": "Eneco",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3395,
+      "Title": "Optimum Way",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3396,
+      "Title": "Orlencharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3397,
+      "Title": "PGE Nowa Energia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3398,
+      "Title": "Evie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3399,
+      "Title": "EV Energy Group (FCN)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3400,
+      "Title": "Electrify Canada",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3401,
+      "Title": "Electromaps",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3402,
+      "Title": "GoCharge (IE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3403,
+      "Title": "E.ON Drive",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3404,
+      "Title": "Grupo ICE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3405,
+      "Title": "Enercharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3406,
+      "Title": "Electric Highway Tasmania",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3407,
+      "Title": "MObiVE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3408,
+      "Title": "eborn",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3409,
+      "Title": "pass pass \u00e9lectrique",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3410,
+      "Title": "Aliz\u00e9 Libert\u00e9",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3411,
+      "Title": "La Borne",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3412,
+      "Title": "Sydego",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3413,
+      "Title": "EcoCharge77",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3414,
+      "Title": "Elinta Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3415,
+      "Title": "ejoin",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3416,
+      "Title": "IVY",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3418,
+      "Title": "evconnect.ro",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3419,
+      "Title": "EV-Mag",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3420,
+      "Title": "plugpoint.ro",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3421,
+      "Title": "Rompetrol",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3422,
+      "Title": "eondrive.ro",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3423,
+      "Title": "Westfalen Weser Netz",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3424,
+      "Title": "EV Direct",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3425,
+      "Title": "OlifeEnergy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3426,
+      "Title": "Blink Charging Europe",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3427,
+      "Title": "EVziiin",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3428,
+      "Title": "EV Loader",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3429,
+      "Title": "Q1 Autostrom",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3430,
+      "Title": "GridServe",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3431,
+      "Title": "Continente Plug&Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3432,
+      "Title": "Volthero",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3433,
+      "Title": "Sonol-evi (Israel)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3434,
+      "Title": "EVEdge (Israel)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3435,
+      "Title": "Afcon (Israel)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3436,
+      "Title": "Tata Power",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3437,
+      "Title": "Elli (Volkswagen Group Charging GmbH)",
+      "IsPrivateIndividual": false,
+      "Comments": "DE*GCE"
+    },
+    {
+      "ID": 3438,
+      "Title": "NRG4YOU",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3439,
+      "Title": "Voltrun",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3440,
+      "Title": "HeraRicarica Pubblica",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3441,
+      "Title": "Blue Marble Charging",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3442,
+      "Title": "e-VOLTT",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3443,
+      "Title": "BIGGIE Energie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3444,
+      "Title": "eways",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3445,
+      "Title": "EDP Smart",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3446,
+      "Title": "EV Dot",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3447,
+      "Title": "Total EV Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3448,
+      "Title": "ZEN (Zero Emission Network)/PROVIRIDIS",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3449,
+      "Title": "ePower",
+      "IsPrivateIndividual": false,
+      "Comments": "Mostly in Ireland, but some outside the country"
+    },
+    {
+      "ID": 3450,
+      "Title": "GO+EAuto",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3451,
+      "Title": "Greenway Polska (PL)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3452,
+      "Title": "TAURON Nowe Technologie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3453,
+      "Title": "PKP Mobility",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3454,
+      "Title": "ZEF Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3455,
+      "Title": "Aral pulse",
+      "IsPrivateIndividual": false,
+      "Comments": "BP's brand name in Germany"
+    },
+    {
+      "ID": 3456,
+      "Title": "Manaseer",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3457,
+      "Title": "ION (Jordan)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3458,
+      "Title": "JoPetrol",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3459,
+      "Title": "ACCIONA - Cargacoches",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3460,
+      "Title": "PEA Volta",
+      "IsPrivateIndividual": false,
+      "Comments": "Provincial Electricity Authority, Thailand"
+    },
+    {
+      "ID": 3461,
+      "Title": "Enex E-Pro",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3462,
+      "Title": "TEA.",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3463,
+      "Title": "AIMove",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3464,
+      "Title": "ALDI S\u00dcD",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3466,
+      "Title": "Next Step Mobility (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3467,
+      "Title": "Mobiliti.hu",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3468,
+      "Title": "Mobiliti.hu",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3469,
+      "Title": "Mobiliti.hu",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3470,
+      "Title": "Mobiliti.hu",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3471,
+      "Title": "MFG EV Power",
+      "IsPrivateIndividual": false,
+      "Comments": "Fossil fuel filling station franchise operator group now doing their own thing in EV charging"
+    },
+    {
+      "ID": 3472,
+      "Title": "eVISO",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3473,
+      "Title": "Vend Electric",
+      "IsPrivateIndividual": false,
+      "Comments": "Apparently operated by Rolec Services."
+    },
+    {
+      "ID": 3474,
+      "Title": "Cogeser Energia (Italia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3475,
+      "Title": "Zepto",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3476,
+      "Title": "Motionbox",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3477,
+      "Title": "Gyorst\u00f6lt\u0151k",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3478,
+      "Title": "ElpeFuture",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3479,
+      "Title": "Monta",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3480,
+      "Title": "ESPH",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3481,
+      "Title": "Be.EV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3482,
+      "Title": "EV Oasis",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3483,
+      "Title": "POBAD International",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3484,
+      "Title": "R3",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3485,
+      "Title": "Stations-e",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3486,
+      "Title": "Emfree",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3487,
+      "Title": "\u041c\u0413\u0422\u0421",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3488,
+      "Title": "Jule Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3489,
+      "Title": "Electra",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3490,
+      "Title": "M\u00e9tropolis",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3491,
+      "Title": "NRGincharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3492,
+      "Title": "MER",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3493,
+      "Title": "SWTCH - Charge Everywhere",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3494,
+      "Title": "Go ToU",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3495,
+      "Title": "Qovoltis",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3496,
+      "Title": "Dragon Charging",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3497,
+      "Title": "EcoFactor Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3498,
+      "Title": "DEI Blue",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3499,
+      "Title": "Mercadona",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3500,
+      "Title": "Evergo",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3501,
+      "Title": "Protergia Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3502,
+      "Title": "EV Point Moldova",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3503,
+      "Title": "Free To X",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3504,
+      "Title": "Leap24 (NL)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3505,
+      "Title": "EVduty",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3506,
+      "Title": "ABC Lataus",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3507,
+      "Title": "Green Drive",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3508,
+      "Title": "Cable Energia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3509,
+      "Title": "Connected Kerb",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3510,
+      "Title": "Circle K",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3511,
+      "Title": "Believ",
+      "IsPrivateIndividual": false,
+      "Comments": "GB*LCL"
+    },
+    {
+      "ID": 3512,
+      "Title": "Sigeif (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3513,
+      "Title": "Electric 55 Charging (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3514,
+      "Title": "Ze-Watt (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3515,
+      "Title": "EZ-Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3516,
+      "Title": "Applegreen Electric",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3517,
+      "Title": "Jom Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3518,
+      "Title": "ParkEasy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3519,
+      "Title": "ELMotion",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3520,
+      "Title": "Polyfazer (RO)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3521,
+      "Title": "Saiel (IT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3522,
+      "Title": "Sperto (DK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3523,
+      "Title": "Porsche Smart Mobility GmbH",
+      "IsPrivateIndividual": false,
+      "Comments": "GB*911,AT*911,CH*911,DE*911,LU*911,NO*911"
+    },
+    {
+      "ID": 3524,
+      "Title": "Electric Vehicle Institute",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3525,
+      "Title": "Acea",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3526,
+      "Title": "EV Range Charging Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3527,
+      "Title": "OpenLoop",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3528,
+      "Title": "Zero (Meridian Energy)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3529,
+      "Title": "Jolt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3530,
+      "Title": "Hikotron",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3531,
+      "Title": "Paz (Israel)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3532,
+      "Title": "e-Mobilita Brno (cz)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3533,
+      "Title": "E-Way (San Marino)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3534,
+      "Title": "Tesla (including non-tesla)",
+      "IsPrivateIndividual": false,
+      "Comments": "Tesla charging including support for non-tesla vehicles"
+    },
+    {
+      "ID": 3535,
+      "Title": "EVerse",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3536,
+      "Title": "Kople",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3537,
+      "Title": "Scottish Power",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3538,
+      "Title": "Power Dot",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3539,
+      "Title": "Zeon Charging",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3540,
+      "Title": "Zoko",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3541,
+      "Title": "Lad Opp",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3542,
+      "Title": "EVCS",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3543,
+      "Title": "Aliz\u00e9",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3544,
+      "Title": "Kiwi EV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3545,
+      "Title": "Z Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3546,
+      "Title": "Thundergrid",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3547,
+      "Title": "Counties Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3548,
+      "Title": "CloudCharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3549,
+      "Title": "Ather Grid Point (India)",
+      "IsPrivateIndividual": false,
+      "Comments": "Scooter manufacturer that provides a charging network for their customers, with 15A domestic connectors for other EVs"
+    },
+    {
+      "ID": 3550,
+      "Title": "PowerDot (Es)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3551,
+      "Title": "ECPoints",
+      "IsPrivateIndividual": false,
+      "Comments": "Place To Plug app"
+    },
+    {
+      "ID": 3552,
+      "Title": "BarterGo (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3553,
+      "Title": "Electro-EMT",
+      "IsPrivateIndividual": false,
+      "Comments": "Empresa Municipal de Transportes de Madrid"
+    },
+    {
+      "ID": 3554,
+      "Title": "EV Highway (Horizon Power)",
+      "IsPrivateIndividual": false,
+      "Comments": "Rapid charging network in Western Australia"
+    },
+    {
+      "ID": 3555,
+      "Title": "LiFe (Raw Charging) (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3556,
+      "Title": "Place To Plug",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3557,
+      "Title": "GALP Electric",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3558,
+      "Title": "Nissan (ES) Dealer Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3559,
+      "Title": "Telepark (Empark)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3560,
+      "Title": "GET Electric (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3561,
+      "Title": "\u015earjon (TR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3562,
+      "Title": "EVC",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3563,
+      "Title": "Tupinamb\u00e1",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3564,
+      "Title": "EZVolt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3565,
+      "Title": "Zletric",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3566,
+      "Title": "Copel",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3567,
+      "Title": "Celesc",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3568,
+      "Title": "NeoEnergia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3569,
+      "Title": "ATM.EV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3571,
+      "Title": "TotalEnergies (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3572,
+      "Title": "Digavel (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3573,
+      "Title": "Naturgy (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3574,
+      "Title": "We Drive Solar",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3575,
+      "Title": "Chargebay",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3576,
+      "Title": "Procredit",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3577,
+      "Title": "B:SM (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3578,
+      "Title": "Weev",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3579,
+      "Title": "E-Flux",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3580,
+      "Title": "Recharge Alaska",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3581,
+      "Title": "Zest Charging",
+      "IsPrivateIndividual": false,
+      "Comments": "bespoke mobile phone app required"
+    },
+    {
+      "ID": 3582,
+      "Title": "Reev (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": "DE*ONE"
+    },
+    {
+      "ID": 3583,
+      "Title": "Eranovum (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3584,
+      "Title": "CEPSA (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": "App: CEPSA Gow"
+    },
+    {
+      "ID": 3585,
+      "Title": "Orion Telekom (Serbia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3586,
+      "Title": "POWY",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3587,
+      "Title": "evyve",
+      "IsPrivateIndividual": false,
+      "Comments": "GB*DRV formerly Drivenergy Ltd) Contactless payment pre-auth is \u00a35.00"
+    },
+    {
+      "ID": 3588,
+      "Title": "Atlante",
+      "IsPrivateIndividual": false,
+      "Comments": "FR*ATL"
+    },
+    {
+      "ID": 3589,
+      "Title": "Yawatt (Es)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3590,
+      "Title": "Optimile",
+      "IsPrivateIndividual": false,
+      "Comments": "BE*OPT"
+    },
+    {
+      "ID": 3591,
+      "Title": "Shell Recharge (Malaysia)",
+      "IsPrivateIndividual": false,
+      "Comments": "quite different network to that operated in Europe"
+    },
+    {
+      "ID": 3592,
+      "Title": "\u0420\u0443\u0441\u0413\u0438\u0434\u0440\u043e (Russia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3593,
+      "Title": "BP EV Charging (NZ)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3594,
+      "Title": "e-Vadea",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3595,
+      "Title": "Engie",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3596,
+      "Title": "Neste Lataus",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3597,
+      "Title": "UTE (Uruguay)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3598,
+      "Title": "Maxol",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3599,
+      "Title": "EG Group EV Point (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3600,
+      "Title": "OnCharge (TR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3601,
+      "Title": "En Yak\u0131t (TR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3602,
+      "Title": "Power\u015farj",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3603,
+      "Title": "WAT Mobilite",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3604,
+      "Title": "GioEV (TR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3605,
+      "Title": "Clenergy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3606,
+      "Title": "Electro Transport Plus (RU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3607,
+      "Title": "Rivian Adventure Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3608,
+      "Title": "OESTE Movilidad (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3609,
+      "Title": "Everty",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3610,
+      "Title": "Rexcharge (Malaysia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3611,
+      "Title": "Polenergia eMobility",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3612,
+      "Title": "SureCharge (FM Conway) (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": "street lighting contractor. Mostly lamp-post chargers, proprietary app or Bonnet app required."
+    },
+    {
+      "ID": 3613,
+      "Title": "Plug N Go Ltd",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3614,
+      "Title": "Drax Energy Solutions Limited",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3615,
+      "Title": "Silverstone Green Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3616,
+      "Title": "EVN (Bulgaria)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3617,
+      "Title": "Rivian Waypoints L2 Network",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3618,
+      "Title": "Powerflex",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3619,
+      "Title": "AmpUp",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3620,
+      "Title": "Livingston Charge Port",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3621,
+      "Title": "Chargelab",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3622,
+      "Title": "Exploren",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3623,
+      "Title": "EVUp (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3624,
+      "Title": "Elanga (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3625,
+      "Title": "Ampol AmpCharge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3626,
+      "Title": "WA EV Network (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3627,
+      "Title": "EVX (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3628,
+      "Title": "CV Charging Vehicles",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3629,
+      "Title": "Project EV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3630,
+      "Title": "EV Georgia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3631,
+      "Title": "e-space (GE)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3632,
+      "Title": "PowerGo (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": "Charge using the PowerGo Charge App."
+    },
+    {
+      "ID": 3633,
+      "Title": "Rosseti (RU",
+      "IsPrivateIndividual": false,
+      "Comments": "App: rs.em"
+    },
+    {
+      "ID": 3634,
+      "Title": "Punkt-E",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3635,
+      "Title": "Seven (IL)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3636,
+      "Title": "Ekoen",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3637,
+      "Title": "APCOA Parking",
+      "IsPrivateIndividual": false,
+      "Comments": "Car park operator"
+    },
+    {
+      "ID": 3638,
+      "Title": "Electrifly",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3639,
+      "Title": "IECharge (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3640,
+      "Title": "Ouest Charge",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3641,
+      "Title": "EVzen (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3642,
+      "Title": "\u041c\u0430\u043b\u0430\u043d\u043a\u0430 (Belarus)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3643,
+      "Title": "EVPower (PT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3644,
+      "Title": "Moon Power",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3645,
+      "Title": "Helexia (PT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3646,
+      "Title": "Sunenergy (PT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3647,
+      "Title": "Ecoinside (PT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3648,
+      "Title": "eVaz Energy (PT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3649,
+      "Title": "Maksu (PT)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3650,
+      "Title": "it Charge (RU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3651,
+      "Title": "Dream Energy",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3652,
+      "Title": "Avia (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3653,
+      "Title": "\u042d\u043d\u0435\u0440\u0433\u0438\u044f \u041c\u043e\u0441\u043a\u0432\u044b",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3654,
+      "Title": "SDET (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": "+33 5 63 43 21 40"
+    },
+    {
+      "ID": 3655,
+      "Title": "EdgeControl (IL)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3656,
+      "Title": "Sitronics Electro (RU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3657,
+      "Title": "NEXTCHARGE",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3658,
+      "Title": "Smart Charge (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3659,
+      "Title": "BP Pulse (AU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3660,
+      "Title": "ChargeSini",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3661,
+      "Title": "Bump (FR)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3662,
+      "Title": "EVSpots (RO)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3663,
+      "Title": "EVPower (MY)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3664,
+      "Title": "PLN (Indonesia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3665,
+      "Title": "Hyundai Indonesia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3666,
+      "Title": "Shell Recharge Indonesia",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3667,
+      "Title": "Wattif EV",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3668,
+      "Title": "EVCuzz (Indonesia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3669,
+      "Title": "Starvo (Indonesia)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3670,
+      "Title": "CitiPark (UK)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3671,
+      "Title": "eMallorca (ES)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3672,
+      "Title": "Westmorland Family",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3673,
+      "Title": "Fuuse",
+      "IsPrivateIndividual": false,
+      "Comments": "GB*FSE"
+    },
+    {
+      "ID": 3674,
+      "Title": "DriveEnergy (RU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3675,
+      "Title": "E-Way (RU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3676,
+      "Title": "ZEVS (RU)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3677,
+      "Title": "Fastvolt",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3678,
+      "Title": "Charge My Ride (Malta)",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3679,
+      "Title": "U-Power",
+      "IsPrivateIndividual": false,
+      "Comments": null
+    },
+    {
+      "ID": 3680,
+      "Title": "Amperio (DE)",
+      "IsPrivateIndividual": false,
+      "Comments": "amperio GmbH DE*AMP"
+    }
+  ],
+  "UsageTypes": [
+    {
+      "ID": 0,
+      "Title": "(Unknown)",
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": null,
+      "IsAccessKeyRequired": null
+    },
+    {
+      "ID": 1,
+      "Title": "Public",
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": null,
+      "IsAccessKeyRequired": null
+    },
+    {
+      "ID": 2,
+      "Title": "Private - Restricted Access",
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": null
+    },
+    {
+      "ID": 3,
+      "Title": "Privately Owned - Notice Required",
+      "IsPayAtLocation": null,
+      "IsMembershipRequired": null,
+      "IsAccessKeyRequired": null
+    },
+    {
+      "ID": 4,
+      "Title": "Public - Membership Required",
+      "IsPayAtLocation": false,
+      "IsMembershipRequired": true,
+      "IsAccessKeyRequired": true
+    },
+    {
+      "ID": 5,
+      "Title": "Public - Pay At Location",
+      "IsPayAtLocation": true,
+      "IsMembershipRequired": false,
+      "IsAccessKeyRequired": false
+    },
+    {
+      "ID": 6,
+      "Title": "Private - For Staff, Visitors or Customers",
+      "IsPayAtLocation": false,
+      "IsMembershipRequired": false,
+      "IsAccessKeyRequired": false
+    },
+    {
+      "ID": 7,
+      "Title": "Public - Notice Required",
+      "IsPayAtLocation": false,
+      "IsMembershipRequired": false,
+      "IsAccessKeyRequired": false
+    }
+  ],
+  "StatusTypes": [
+    {
+      "ID": 0,
+      "Title": "Unknown",
+      "IsOperational": null
+    },
+    {
+      "ID": 10,
+      "Title": "Currently Available (Automated Status)",
+      "IsOperational": true
+    },
+    {
+      "ID": 20,
+      "Title": "Currently In Use (Automated Status)",
+      "IsOperational": true
+    },
+    {
+      "ID": 30,
+      "Title": "Temporarily Unavailable",
+      "IsOperational": true
+    },
+    {
+      "ID": 50,
+      "Title": "Operational",
+      "IsOperational": true
+    },
+    {
+      "ID": 75,
+      "Title": "Partly Operational (Mixed)",
+      "IsOperational": true
+    },
+    {
+      "ID": 100,
+      "Title": "Not Operational",
+      "IsOperational": false
+    },
+    {
+      "ID": 150,
+      "Title": "Planned For Future Date",
+      "IsOperational": false
+    },
+    {
+      "ID": 200,
+      "Title": "Removed (Decommissioned)",
+      "IsOperational": false
+    },
+    {
+      "ID": 210,
+      "Title": "Removed (Duplicate Listing)",
+      "IsOperational": false
+    }
+  ]
+}

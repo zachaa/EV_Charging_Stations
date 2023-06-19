@@ -56,8 +56,8 @@ class SQLiteManager:
         self.session.close()
 
 # Usage example
-database_path = "../data/reduced_data.sqlite"
-csv_path = "../data/reduced_data.csv"
+database_path = "data/reduced_data.sqlite"
+csv_path = "data/reduced_data.csv"
 
 manager = SQLiteManager(database_path)
 manager.create_database()
@@ -69,4 +69,3 @@ manager.import_csv_to_table(csv_path)
 #     print(result.Title, result.AddressLine1)
 
 manager.close_connection()
-

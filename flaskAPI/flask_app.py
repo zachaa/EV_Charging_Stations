@@ -10,7 +10,7 @@ from sqlalchemy import create_engine, func
 
 # Database Setup
 #####################################################
-engine = create_engine("sqlite:///../data/reduced_data.sqlite", echo=False)
+engine = create_engine("sqlite:///data/reduced_data.sqlite", echo=False)
 
 #reflect database to new model and table
 Base= automap_base()
@@ -78,5 +78,4 @@ def chargers_by_city(town):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-session.close()
+    session.close()
