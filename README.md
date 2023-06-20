@@ -24,8 +24,17 @@ For testing maps and charts with HTML, CSS, JS
 
 
 ## Libraries
+### JavaScript
 - D3
 - Plotly
 - Leaflet.js
     - [leaflet-heat](https://github.com/Leaflet/Leaflet.heat)
         - if this is slow try [this one](https://github.com/ursudio/leaflet-webgl-heatmap)
+    - [leaflet-gliphy](https://github.com/robertleeplummerjr/Leaflet.glify) for possibly faster thousands of points
+        - [https://stackoverflow.com/questions/43015854/large-dataset-of-markers-or-dots-in-leaflet](https://stackoverflow.com/questions/43015854/large-dataset-of-markers-or-dots-in-leaflet)
+
+### Python
+- geopy
+- pandas
+- requests
+- sqlalchemy

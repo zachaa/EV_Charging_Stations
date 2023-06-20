@@ -205,8 +205,26 @@ function createMap() {
     // =================================================
     // create overlay maps
     let heatArray = [];
+    let circleMarkers = [];
+
+    // for faster rendering of many points: check this out => Seems to work well
+    let canvasRenderer = L.canvas({ padding: 0.1 });
+
     fullData.forEach(element => {
         heatArray.push([element.Latitude, element.Longitude]);
+        circleMarkers.push(L.circleMarker(
+            L.latLng(element.Latitude, element.Longitude), {
+                color: "#22DD44",  // some function
+                fillOpacity: 0.6,
+                radius: 5,
+                stroke: false,
+                renderer: canvasRenderer
+            }).bindPopup(`${element.Title}
+                          <hr>
+                          Operator: ${element.OperatorID}<br>
+                          Usage: ${element.UsageTypeID}<br>
+                          Points: ${element.NumberOfPoints}`)
+            );
     });
 
     let heatmap = L.heatLayer(heatArray, {
@@ -216,8 +234,13 @@ function createMap() {
         maxZoom: 15
     });
 
+
+    let markerLayer = L.layerGroup(circleMarkers);
+
+
     let overlayMaps = {
-        Heatmap: heatmap
+        Heatmap: heatmap,
+        Markers: markerLayer
     };
 
     // =================================================
@@ -228,10 +251,11 @@ function createMap() {
         layers: [street, heatmap]
     });
 
-    L.control.layers(
-        baseMaps,
-        overlayMaps,
-        {collapsed: true})
+    // separate L.control.layers so overlays can't be shown at the same time
+    // https://gis.stackexchange.com/questions/267605/leaflet-api-select-one-overlay-at-a-time-like-base-layers
+    L.control.layers(baseMaps)
+        .addTo(chargeMap);
+    L.control.layers(overlayMaps)
         .addTo(chargeMap);
 }
 
