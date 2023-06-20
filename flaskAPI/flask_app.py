@@ -52,8 +52,11 @@ def chargers_by_city(town):
                               reduced_data.Latitude,
                               reduced_data.Longitude,
                               reduced_data.ConnectionTypeIDs).filter(reduced_data.Town == town).all()
-    #session.close()
+    session.close()
 
+    if not results:
+        return jsonify({'message': 'No results for the given city'}), 404
+    
     #Dictionary first API
     address_list = []
     for results in results:
@@ -71,6 +74,40 @@ def chargers_by_city(town):
     #Return JSON
     return jsonify(address_list)
 
+#Query by State
+
+@app.route("/api/v1.0/chargers_by_state/<state>")
+def chargers_by_state(state):
+    results = session.query(reduced_data.Title,
+                              reduced_data.AddressLine1,
+                              reduced_data.Town,
+                              reduced_data.StateOrProvince,
+                              reduced_data.Postcode,
+                              reduced_data.Latitude,
+                              reduced_data.Longitude,
+                              reduced_data.ConnectionTypeIDs).filter(reduced_data.StateOrProvince == state).all()
+    session.close()
+
+    if not results:
+        return jsonify({'message': 'No results for the given state'}), 404
+
+    #Dictionary first API
+    state_address_list = []
+    for results in results:
+        state_address = {
+            "Location Name": results.Title,
+            "Address": results.AddressLine1,
+            "Town": results.Town,
+            "State": results.StateOrProvince,
+            "Zip Code": results.Postcode,
+            "Latitude": results.Latitude,
+            "Longitude": results.Longitude,
+            "ConnectionType": results.ConnectionTypeIDs
+        }
+        state_address_list.append(state_address)
+    #Return JSON
+    return jsonify(state_address_list)
+
 
 
 
@@ -78,4 +115,5 @@ def chargers_by_city(town):
 
 if __name__ == "__main__":
     app.run(debug=True)
-    session.close()
+    
+session.close()
