@@ -10,7 +10,6 @@ function setSelectOptions() {
     });
 }
 
-
 async function init() {
     setSelectOptions();
 
@@ -82,6 +81,11 @@ async function init() {
     console.log("Init complete");
 }
 
+/**
+ * Gives filtered data for a specific state to be used when creating a chart.
+ * @param {string} locationFilter USA or two character state abbreviation
+ * @returns object with filtered data for creating charts
+ */
 function createLocationDataSubset(locationFilter) {
     let powerLevelData = {
         "1": 0,
@@ -182,6 +186,108 @@ function updateCharts(stateOption) {
     Plotly.restyle("plot3", barHUpdate);
 }
 
+/**Give a color string for a given method and ID value.
+ * 
+ * @param {string} method what is the marker showing (OperatorID, StatusTypeID, UsageTypeID)
+ * @param {integer} value ID number
+ * @returns hex color string
+ */
+function colorMarker(method, value) {
+    if (method === "OperatorID") {
+        switch (value) {  // By approximate order of popularity in US
+            case 1:  // Unknown
+                return "#aaaaaa";
+            case 5:  // ChargePoint
+                return "#FB8117";
+            case 23:  // Tesla (tesla only)
+            case 3534:  // Tesla (+ non-tesla)
+                return "#dd0000";
+            case 39:  // SemaConnect (acquired by Blink in 2022)
+            case 9:  // Blink Network/ECOtality (bankrupt)
+            case 3426:  // Blink Charging Europe
+            case 3391:  // EB Charging (acquired in 2022)
+                return "#1B66A3";
+            case 59:  // Shell Recharge Solutions (US)
+            case 47:  // NL
+            case 156:  // DE
+            case 157:  // BE
+            case 3392:  // UK
+            case 3591:  // Malaysia
+            case 3666:  // Indonesia
+                return "#FFEA00";
+            case 3372:  // EV Connect
+                return "#00FFFF";
+            case 15:  // eVgo
+            case 3252:  // NEG EVgo
+                return "#0077ff";
+            default:
+                return "#22AA44";
+        }
+    } else if (method === "StatusTypeID") {
+        switch (value) {
+            case 0:  // Unknown
+                return "#aaaaaa";
+            case 10:  // Avaliable
+            case 20:
+                return "#22FF22";
+            case 30:  // Temporarily Unavailable
+                return "#FF9900";
+            case 50:  // Operational
+            case 75:
+                return "#11AA11";
+            case 100:  // Not Operational
+                return "#BB0000";
+            case 150:  // Future
+                return "#D200CF";
+            case 200:  // Removed
+                return "#222222";
+            case 210:  // Removed Duplicate
+                return "#4A2B00";
+            default:
+                return "#984A6A";
+        }
+    } else if (method === "UsageTypeID") {
+        switch (value) {
+            case 0:  // Unknown
+                return "#aaaaaa";
+            case 1:  // Public
+            case 5:  // Public - Pay
+                return "#22AA44";
+            case 2:  // Private - Restricted
+                return "#BB0000";
+            case 3:  // Privately Owned
+                return "#FF7B00";
+            case 4:  // Public - Membership
+                return "#1E78FF";
+            case 6:  // Private - Staff/Customers
+                return "#FFF200";
+            case 7:  // Public - Notice Required
+                return "#00FFA6";
+            default:
+                return "#984A6A";
+        }
+    } else {
+        return "#22DD44";
+    }
+}
+
+function createCircleMarker(typeName, renderer, elementData) {
+    let circleMarker = L.circleMarker(
+        L.latLng(elementData.Latitude, elementData.Longitude), {
+            color: colorMarker(typeName, elementData[typeName]),  // StatusTypeID, OperatorID, UsageTypeID?)
+            fillOpacity: 0.8,
+            radius: 5,
+            stroke: false,
+            renderer: renderer
+        }).bindPopup(`${elementData.Title}
+                      <hr>
+                      Operator: ${elementData.OperatorID}<br>
+                      Usage: ${elementData.UsageTypeID}<br>
+                      Status: ${elementData.StatusTypeID}<br>
+                      Points: ${elementData.NumberOfPoints}`)
+    return circleMarker;
+}
+
 function createMap() {
     let esriGray = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
@@ -205,26 +311,18 @@ function createMap() {
     // =================================================
     // create overlay maps
     let heatArray = [];
-    let circleMarkers = [];
+    let circleMarkersStatus = [];
+    let circleMarkersOperator = [];
+    let circleMarkersUsage = [];
 
     // for faster rendering of many points: check this out => Seems to work well
     let canvasRenderer = L.canvas({ padding: 0.1 });
 
     fullData.forEach(element => {
         heatArray.push([element.Latitude, element.Longitude]);
-        circleMarkers.push(L.circleMarker(
-            L.latLng(element.Latitude, element.Longitude), {
-                color: "#22DD44",  // some function
-                fillOpacity: 0.6,
-                radius: 5,
-                stroke: false,
-                renderer: canvasRenderer
-            }).bindPopup(`${element.Title}
-                          <hr>
-                          Operator: ${element.OperatorID}<br>
-                          Usage: ${element.UsageTypeID}<br>
-                          Points: ${element.NumberOfPoints}`)
-            );
+        circleMarkersStatus.push(createCircleMarker("StatusTypeID", canvasRenderer, element));
+        circleMarkersOperator.push(createCircleMarker("OperatorID", canvasRenderer, element));
+        circleMarkersUsage.push(createCircleMarker("UsageTypeID", canvasRenderer, element));
     });
 
     let heatmap = L.heatLayer(heatArray, {
@@ -234,13 +332,15 @@ function createMap() {
         maxZoom: 15
     });
 
-
-    let markerLayer = L.layerGroup(circleMarkers);
-
+    let markerLayerStatus = L.layerGroup(circleMarkersStatus);
+    let markerLayerOperator = L.layerGroup(circleMarkersOperator);
+    let markerLayerUsage = L.layerGroup(circleMarkersUsage);
 
     let overlayMaps = {
         Heatmap: heatmap,
-        Markers: markerLayer
+        Status: markerLayerStatus,
+        Operator: markerLayerOperator,
+        Usage: markerLayerUsage
     };
 
     // =================================================
