@@ -9,3 +9,34 @@ body, html {
 #map {
     height: 500px;
 }
+
+.legend {
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+h3.legend_title {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.legend_row {
+  padding: 4px, 2px;
+}
+
+.legend_color {
+  float: left;
+  width: 15px;
+  height: 15px;
+}
+
+.legend_text {
+  padding: 0px 2px 0px 20px;
+}

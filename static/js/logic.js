@@ -288,6 +288,32 @@ function createCircleMarker(typeName, renderer, elementData) {
     return circleMarker;
 }
 
+function createLegend(legendData, legendTitle, colorMethod) {
+    let legend = L.control({position: "bottomright"});
+    legend.onAdd = () => {
+        let div = L.DomUtil.create("div", "legend");
+
+        // Create each row div in a loop to get the color from colorMarker() function
+        let htmlRowDivs = [];
+        legendData.forEach(row => {
+            let itemColor = colorMarker(colorMethod, row[0]);
+            htmlRowDivs.push(`<div class="legend_row">
+                                <div class="legend_color" style="background: ${itemColor}"></div>
+                                <div class="legend_text">${row[1]}</div>
+                            </div>`);
+        });
+
+        // create the HTML for the legend
+        // join the array of row divs
+        div.innerHTML = `<h3 class="legend_title">${legendTitle}</h3>
+                        <div class="data_container">
+                            ${htmlRowDivs.join('')}
+                        </div>`;
+        return div;
+    }
+    return legend;
+}
+
 function createMap() {
     let esriGray = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
@@ -357,6 +383,50 @@ function createMap() {
         .addTo(chargeMap);
     L.control.layers(overlayMaps)
         .addTo(chargeMap);
+
+    // data for different layers
+    // contains an ID for the color and descriptive text
+    let legendDataStatus = [[0, "Unknown"], [10, "Avaliable"], [30, "Temporarily Unavailable"],
+        [50, "Operational"], [100, "Not Avaliable"], [150, "Future Site"],
+        [200, "Removed"], [210, "Duplicate"]];
+    let legendDataOperator = [[5, "ChargePoint"], [23, "Tesla"], [9, "Blink"], [59, "Shell Recharge"],
+        [3372, "EV Connect"], [15, "eVgo"], [-1, "Other Operators"], [1, "Unknown"]];
+    let legendDataUsage = [[1, "Public"], [7, "Public - Notice Required"], [4, "Public - Membership"],
+        [6, "Private - Staff/Customers"], [3, "Privately Owned"], [2, "Private - Restricted"], [0, "Unknown"]];
+    
+    // hold the different legends in one object
+    let legendMap = {
+        Status: createLegend(legendDataStatus, "Station Status", "StatusTypeID"),
+        Operator: createLegend(legendDataOperator, "Station Operator", "OperatorID"),
+        Usage: createLegend(legendDataUsage, "Station Usage", "UsageTypeID"),
+    }
+
+    
+    chargeMap.on("baselayerchange", event => {
+        let layerName = event.name;
+        console.log("Switching to overlay:", layerName);
+        if (layerName in baseMaps) {return;}  // ignore standard base maps
+        if (layerName in legendMap) {
+            // remove existing legends
+
+            // add new legend
+            if (layerName === "Heatmap") {return;}
+            chargeMap.addControl(legendMap[layerName]);
+        }
+        // for (let layerName in overlayMaps) {
+        //     // apparently this is incorrect: overlayMaps.hasOwnProperty(layerName)
+        //     console.log(Object.prototype.hasOwnProperty.call(overlayMaps, layerName));
+        //     if (Object.prototype.hasOwnProperty.call(overlayMaps, layerName)) {
+        //       let layer = overlayMaps[layerName];
+        //       if (layerName !== overlayName && chargeMap.hasLayer(layer)) {
+        //         console.log("try to remove ", layerName, "Has layer?", chargeMap.hasLayer(layer));
+        //         chargeMap.removeLayer(layer);
+        //         console.log("Remove layer was called. Did it work?")
+        //         break;
+        //       }
+        //     }
+        //   }
+    });
 }
 
 function optionChanged(value) {
