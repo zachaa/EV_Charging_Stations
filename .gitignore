@@ -137,6 +137,9 @@ dmypy.json
 Thumbs.db
 package.json
 api_keys.py
+*.sqlite3
+*.sqlite
+*.db
 
 data/poi_data.json
 data/reference_data.json

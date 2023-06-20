@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 3</title>
-  <!-- External scripts and stylesheets -->
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  
-  <!--
-  <link rel="stylesheet" href=""/>
-  <script src=""></script>
-  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <!-- External scripts and stylesheets -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
-  <div class="main_container">
-    <select id="selectState" onchange="optionChanged(this.value)">
-      <option value="USA">United States</option>
-    </select>
-    <div class="plots_container">
-      <div class="plot" id="plot1">
+    <div class="main_container">
+        <div id="map"></div>
+        <hr>
+        <select id="selectState" onchange="optionChanged(this.value)">
+            <option value="USA">United States</option>
+        </select>
 
-      </div>
-      <div class="plot" id="plot2">
-        
-      </div>
-      <div class="plot" id="plot3">
-        
-      </div>
+        <div class="plots_container">
+            <div class="plot" id="plot1"></div>
+            <div class="plot" id="plot2"></div>
+            <div class="plot" id="plot3"></div>
+        </div>
+
     </div>
-  </div>
-  
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="static/js/states.js"></script>
-  <script type="text/javascript" src="static/js/logic.js"></script>
+
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/states.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script>
 </body>
 </html>

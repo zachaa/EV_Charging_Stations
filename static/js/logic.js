@@ -18,6 +18,8 @@ async function init() {
     fullData = await d3.json("/data/reduced_data.json");
     referenceData = await d3.json("/data/reduced_reference_data.json");
 
+    createMap();
+
     // set initial data to use full country data
     let bulkData = createLocationDataSubset("USA");
 
@@ -178,6 +180,59 @@ function updateCharts(stateOption) {
         y: [bulkData.OperatorDataArray.slice(0, 15).reverse().map(operator => operator[0])]
     };
     Plotly.restyle("plot3", barHUpdate);
+}
+
+function createMap() {
+    let esriGray = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
+    });
+
+    let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    })
+
+    let USGS_USImagery = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 16,
+        attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    });
+
+    let baseMaps = {
+        Base: esriGray,
+        Streets: street,
+        Satellite: USGS_USImagery
+    };
+    // =================================================
+    // create overlay maps
+    let heatArray = [];
+    fullData.forEach(element => {
+        heatArray.push([element.Latitude, element.Longitude]);
+    });
+
+    let heatmap = L.heatLayer(heatArray, {
+        radius: 15,
+        blur: 20,
+        minOpacity: 0.4,
+        maxZoom: 15
+    });
+
+    let overlayMaps = {
+        Heatmap: heatmap
+    };
+
+    // =================================================
+    // create the map
+    let chargeMap = L.map("map", {
+        center: [37.0902, -95.7129],
+        zoom: 4,
+        layers: [street, heatmap]
+    });
+
+    L.control.layers(
+        baseMaps,
+        overlayMaps,
+        {collapsed: true})
+        .addTo(chargeMap);
 }
 
 function optionChanged(value) {

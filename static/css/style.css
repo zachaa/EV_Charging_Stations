@@ -1,0 +1,11 @@
+body, html {
+  height: 100%;
+}
+
+.main_container {
+    min-height: 90%;
+}
+
+#map {
+    height: 500px;
+}
