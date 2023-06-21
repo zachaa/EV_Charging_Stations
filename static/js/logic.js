@@ -22,7 +22,8 @@ async function init() {
     // set initial data to use full country data
     let bulkData = createLocationDataSubset("USA");
 
-    // make charts with data
+    // Initial Chart creation
+    // Bar Chart (Count of Power Levels)
     let trace1 = [{
         x: [1, 2, 3, 4],
         y: Object.values(bulkData["PowerLevelData"]),
@@ -37,9 +38,9 @@ async function init() {
                            ticktext: ["Level 1", "Level 2", "Level 3", "Unknown"]},
                    yaxis: {title: "Count",
                            fixedrange: true}};
-    Plotly.newPlot("plot1", trace1, layout1);
+    Plotly.newPlot("plotPowerLevels", trace1, layout1);
 
-    // Pie Chart
+    // Pie Chart (Public vs Private)
     let trace2 = [{
         values: Object.values(bulkData.PublicPrivateData),
         labels: referenceData.UsageTypes.map(usageTypes => usageTypes.Title),
@@ -58,7 +59,7 @@ async function init() {
     let layout2 = {
         title: "Public vs Private"
     };
-    Plotly.newPlot("plot2", trace2, layout2);
+    Plotly.newPlot("plotPie", trace2, layout2);
 
     // Horizontal Bar Chart (Operators)
     let trace3 = [{
@@ -76,7 +77,24 @@ async function init() {
         yaxis: {title: "Operators",
                 fixedrange: true}
     }
-    Plotly.newPlot("plot3", trace3, layout3)
+    Plotly.newPlot("plotOperators", trace3, layout3)
+
+    // Status Bar Chart
+    let traceStatus = [{
+        x: bulkData.StatusDataArray.map(operator => operator[0]),
+        y: bulkData.StatusDataArray.map(operator => operator[1]),
+        name: "Status",
+        type: "bar"
+    }]
+    let layoutStatus = {
+        title: "Status of Chargers",
+        xaxis: {title: "Status",
+                fixedrange: true},
+        yaxis: {title: "log(Count)",
+                type: 'log',        // Helps visualize other numbers
+                fixedrange: true}
+    }
+    Plotly.newPlot("plotStatus", traceStatus, layoutStatus)
 
     console.log("Init complete");
 }
@@ -107,60 +125,75 @@ function createLocationDataSubset(locationFilter) {
 
     let stationOperatorData = {}
 
-    if (locationFilter === "USA") {
-        // use full data
-        fullData.forEach(element => {
-            // set power Level data (there can be multiple different values for each station)
-            if (element.LUnknownCount > 0) {powerLevelData["Unknown"]++}
-            if (element.L1Count > 0) {powerLevelData["1"]++}
-            if (element.L2Count > 0) {powerLevelData["2"]++}
-            if (element.L3Count > 0) {powerLevelData["3"]++}
-
-            // set public/private data value
-            publicPrivateData[element.UsageTypeID]++;
-
-            // set operator data value
-            stationOperatorData[element.OperatorID] = stationOperatorData[element.OperatorID] || 0;
-            stationOperatorData[element.OperatorID]++;
-        });
-    } else {
-        let singleStateData = fullData.filter(station => (station.StateOrProvince == locationFilter));
-        console.log("Items in state data:", locationFilter, singleStateData.length)
-        singleStateData.forEach(element => {
-            // set power Level data (there can be multiple different values for each station)
-            if (element.LUnknownCount > 0) {powerLevelData["Unknown"]++}
-            if (element.L1Count > 0) {powerLevelData["1"]++}
-            if (element.L2Count > 0) {powerLevelData["2"]++}
-            if (element.L3Count > 0) {powerLevelData["3"]++}
-
-            // set public/private data value
-            publicPrivateData[element.UsageTypeID]++;
-
-            // set operator data value
-            // if key does not exist yet, create it then increase count
-            stationOperatorData[element.OperatorID] = stationOperatorData[element.OperatorID] || 0;
-            stationOperatorData[element.OperatorID]++;
-        });
+    let stationStatusData = {
+        0: 0,
+        10: 0,
+        20: 0,
+        30: 0,
+        50: 0,
+        75: 0,
+        100: 0,
+        150: 0,
+        200: 0,
+        210: 0
     }
+
+    // either use full country data or filter to a specific state
+    let locationData;
+    if (locationFilter === "USA") {
+        locationData = fullData;
+    } else {
+        locationData = fullData.filter(station => (station.StateOrProvince == locationFilter));
+        console.log("Items in state data:", locationFilter, locationData.length)
+    }
+
+    // loop through main data to fill objects with needed data
+    locationData.forEach(element => {
+        // set power Level data (there can be multiple different values for each station)
+        if (element.LUnknownCount > 0) {powerLevelData["Unknown"]++}
+        if (element.L1Count > 0) {powerLevelData["1"]++}
+        if (element.L2Count > 0) {powerLevelData["2"]++}
+        if (element.L3Count > 0) {powerLevelData["3"]++}
+
+        // set public/private data value
+        publicPrivateData[element.UsageTypeID]++;
+
+        // set operator data value
+        // if key does not exist yet, create it then increase count
+        stationOperatorData[element.OperatorID] = stationOperatorData[element.OperatorID] || 0;
+        stationOperatorData[element.OperatorID]++;
+
+        // set status data value
+        stationStatusData[element.StatusTypeID]++;
+    });
 
     // create Array of objects for operator data
     let operatorDataArray = [];
-    // sort Operator Data from highest to lowest (descending)
+    // fill array by looping through operator data
     for (const [key, value] of Object.entries(stationOperatorData)) {
         // select the correct operator from reference data
         let operatorObject = referenceData.OperatorTypes.filter(operator => operator.ID == key)[0];
         operatorDataArray.push([operatorObject.Title, value]);
     }
-    // sort in place from most to least stations being operated
+    // sort Operator Data from highest to lowest (descending)
     operatorDataArray.sort((a, b) => b[1] - a[1]);
+
+    // create Array of objects for status data
+    let statusDataArray = [];
+    for (const [key, value] of Object.entries(stationStatusData)) {
+        let statusObject = referenceData.StatusTypes.filter(status => status.ID == key)[0];
+        statusDataArray.push([statusObject.Title, value]);
+    }
 
     // console.log(Object.values(powerLevelData));
     // console.log(publicPrivateData);
     // console.log(operatorDataArray);
+    // console.log(statusDataArray);
     let bulkData = {
         "PowerLevelData": powerLevelData,
         "PublicPrivateData": publicPrivateData,
-        "OperatorDataArray": operatorDataArray
+        "OperatorDataArray": operatorDataArray,
+        "StatusDataArray": statusDataArray
     };
 
     return bulkData;
@@ -172,18 +205,24 @@ function updateCharts(stateOption) {
     let barUpdate = {
         y: [Object.values(bulkData["PowerLevelData"])]
     };
-    Plotly.restyle("plot1", barUpdate);
+    Plotly.restyle("plotPowerLevels", barUpdate);
 
     let pieUpdate = {
         values: [Object.values(bulkData.PublicPrivateData)]
     };
-    Plotly.restyle("plot2", pieUpdate);
+    Plotly.restyle("plotPie", pieUpdate);
 
     let barHUpdate = {
         x: [bulkData.OperatorDataArray.slice(0, 15).reverse().map(operator => operator[1])],
         y: [bulkData.OperatorDataArray.slice(0, 15).reverse().map(operator => operator[0])]
     };
-    Plotly.restyle("plot3", barHUpdate);
+    Plotly.restyle("plotOperators", barHUpdate);
+
+    let barStatusUpdate = {
+        x: [bulkData.StatusDataArray.map(operator => operator[0])],
+        y: [bulkData.StatusDataArray.map(operator => operator[1])],
+    }
+    Plotly.restyle("plotStatus", barStatusUpdate);
 }
 
 /**Give a color string for a given method and ID value.
@@ -238,13 +277,13 @@ function colorMarker(method, value) {
             case 100:  // Not Operational
                 return "#BB0000";
             case 150:  // Future
-                return "#D200CF";
+                return "#FF34FC";
             case 200:  // Removed
                 return "#222222";
             case 210:  // Removed Duplicate
                 return "#4A2B00";
             default:
-                return "#984A6A";
+                return "#FF006A";
         }
     } else if (method === "UsageTypeID") {
         switch (value) {
