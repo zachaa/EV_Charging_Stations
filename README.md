@@ -32,6 +32,8 @@ For testing maps and charts with HTML, CSS, JS
         - if this is slow try [this one](https://github.com/ursudio/leaflet-webgl-heatmap)
     - [leaflet-gliphy](https://github.com/robertleeplummerjr/Leaflet.glify) for possibly faster thousands of points
         - [https://stackoverflow.com/questions/43015854/large-dataset-of-markers-or-dots-in-leaflet](https://stackoverflow.com/questions/43015854/large-dataset-of-markers-or-dots-in-leaflet)
+    - [leaflet-fullscreen] (https://github.com/brunob/leaflet.fullscreen)
+        - adds a full screen button next to zoom buttons
 
 ### Python
 - geopy

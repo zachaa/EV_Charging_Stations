@@ -334,8 +334,8 @@ function createMap() {
         Streets: street,
         Satellite: USGS_USImagery
     };
-    // =================================================
-    // create overlay maps
+
+    // Feature Maps =========================================================
     let heatArray = [];
     let circleMarkersStatus = [];
     let circleMarkersOperator = [];
@@ -344,6 +344,7 @@ function createMap() {
     // for faster rendering of many points: check this out => Seems to work well
     let canvasRenderer = L.canvas({ padding: 0.1 });
 
+    // create data for the different maps all in 1 loop
     fullData.forEach(element => {
         heatArray.push([element.Latitude, element.Longitude]);
         circleMarkersStatus.push(createCircleMarker("StatusTypeID", canvasRenderer, element));
@@ -358,6 +359,7 @@ function createMap() {
         maxZoom: 15
     });
 
+    // marker maps with all locations as circles with popups
     let markerLayerStatus = L.layerGroup(circleMarkersStatus);
     let markerLayerOperator = L.layerGroup(circleMarkersOperator);
     let markerLayerUsage = L.layerGroup(circleMarkersUsage);
@@ -369,8 +371,7 @@ function createMap() {
         Usage: markerLayerUsage
     };
 
-    // =================================================
-    // create the map
+    // MAP ===================================================================
     let chargeMap = L.map("map", {
         center: [37.0902, -95.7129],
         zoom: 4,
@@ -384,7 +385,7 @@ function createMap() {
     L.control.layers(overlayMaps)
         .addTo(chargeMap);
 
-    // data for different layers
+    // LEGENDS ==============================================================
     // contains an ID for the color and descriptive text
     let legendDataStatus = [[0, "Unknown"], [10, "Avaliable"], [30, "Temporarily Unavailable"],
         [50, "Operational"], [100, "Not Avaliable"], [150, "Future Site"],
@@ -395,37 +396,30 @@ function createMap() {
         [6, "Private - Staff/Customers"], [3, "Privately Owned"], [2, "Private - Restricted"], [0, "Unknown"]];
     
     // hold the different legends in one object
+    // keys NEED to have the same name as the layer
     let legendMap = {
         Status: createLegend(legendDataStatus, "Station Status", "StatusTypeID"),
         Operator: createLegend(legendDataOperator, "Station Operator", "OperatorID"),
         Usage: createLegend(legendDataUsage, "Station Usage", "UsageTypeID"),
     }
 
-    
     chargeMap.on("baselayerchange", event => {
         let layerName = event.name;
         console.log("Switching to overlay:", layerName);
         if (layerName in baseMaps) {return;}  // ignore standard base maps
-        if (layerName in legendMap) {
-            // remove existing legends
-
-            // add new legend
-            if (layerName === "Heatmap") {return;}
-            chargeMap.addControl(legendMap[layerName]);
+        else {
+            // Remove ALL legends if they are shown
+            //  This is a dirty way of doing it but there is no built in way
+            //   with leaflet to check if a control already exists.
+            for (const legend of Object.entries(legendMap)) {
+                chargeMap.removeControl(legend[1]);
+            }
+            
+            // add new legend (but not for Heatmap)
+            if (layerName in legendMap) {
+                chargeMap.addControl(legendMap[layerName]);
+            }
         }
-        // for (let layerName in overlayMaps) {
-        //     // apparently this is incorrect: overlayMaps.hasOwnProperty(layerName)
-        //     console.log(Object.prototype.hasOwnProperty.call(overlayMaps, layerName));
-        //     if (Object.prototype.hasOwnProperty.call(overlayMaps, layerName)) {
-        //       let layer = overlayMaps[layerName];
-        //       if (layerName !== overlayName && chargeMap.hasLayer(layer)) {
-        //         console.log("try to remove ", layerName, "Has layer?", chargeMap.hasLayer(layer));
-        //         chargeMap.removeLayer(layer);
-        //         console.log("Remove layer was called. Did it work?")
-        //         break;
-        //       }
-        //     }
-        //   }
     });
 }
 
