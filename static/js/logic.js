@@ -1,6 +1,8 @@
 let fullData;
 let referenceData;
 
+/** Adds all the states/territories to the drop down selection as options.
+ */
 function setSelectOptions() {
     let dropDown = d3.select("#selectState");
     states.forEach(state => {
@@ -21,6 +23,8 @@ async function init() {
 
     // set initial data to use full country data
     let bulkData = createLocationDataSubset("USA");
+
+    // #region Charts
 
     // Initial Chart creation
     // Bar Chart (Count of Power Levels)
@@ -95,12 +99,12 @@ async function init() {
                 fixedrange: true}
     }
     Plotly.newPlot("plotStatus", traceStatus, layoutStatus)
+    // #endregion
 
     console.log("Init complete");
 }
 
-/**
- * Gives filtered data for a specific state to be used when creating a chart.
+/** Gives filtered data for a specific state to be used when creating a chart.
  * @param {string} locationFilter USA or two character state abbreviation
  * @returns object with filtered data for creating charts
  */
@@ -327,6 +331,13 @@ function createCircleMarker(typeName, renderer, elementData) {
     return circleMarker;
 }
 
+/**
+ * Creates a leaflet legend
+ * @param {Array} legendData Array of Arrays containing ID int and Text description for each item to be added
+ * @param {string} legendTitle Title of the legend
+ * @param {string} colorMethod name of the method to get colors for the IDs
+ * @returns leaflet Legend
+ */
 function createLegend(legendData, legendTitle, colorMethod) {
     let legend = L.control({position: "bottomright"});
     legend.onAdd = () => {
@@ -382,6 +393,12 @@ function createMap() {
 
     // for faster rendering of many points: check this out => Seems to work well
     let canvasRenderer = L.canvas({ padding: 0.1 });
+
+    // Example of using a for loop instead of .forEach()
+    // for (let i =0; i < fullData.length; i++) {
+    //     let location = fullData[i];
+    //     heatArray.push([location.Latitude, location.Longitude]);
+    // }
 
     // create data for the different maps all in 1 loop
     fullData.forEach(element => {
@@ -462,10 +479,13 @@ function createMap() {
     });
 }
 
+/**
+ * function runs when drop down is changed to a new option, updates the charts
+ * @param {string} value state abbreviation or USA
+ */
 function optionChanged(value) {
     console.log("Value changed to:", value);
     updateCharts(value);
 }
-
 
 init()
