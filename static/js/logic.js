@@ -428,10 +428,12 @@ function createMap() {
     };
 
     // MAP ===================================================================
+    // Full screen button: https://github.com/Leaflet/Leaflet.fullscreen
     let chargeMap = L.map("map", {
         center: [37.0902, -95.7129],
         zoom: 4,
-        layers: [street, heatmap]
+        layers: [street, heatmap],
+        fullscreenControl: {pseudoFullscreen: true} // true = fullscreen to page width and height
     });
 
     // separate L.control.layers so overlays can't be shown at the same time

@@ -23,6 +23,19 @@ html {
   }
 }
 
+/* Create a darkmode map */
+/* modified from: https://dev.to/deepakdevanand/leaflet-map-dark-theme-5ej0 */
+.leaflet-control-layers,
+.leaflet-control-fullscreen,
+.leaflet-control-zoom,
+.leaflet-tile-pane {
+  filter: invert(100%) hue-rotate(200deg);
+}
+
+.leaflet-container {
+  background-color: #333; /*No bright flash */
+}
+
 /* Selection, Header, Footer */
 header {
   font-size: 2.5em;
