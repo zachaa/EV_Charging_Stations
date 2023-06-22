@@ -1,14 +1,99 @@
-body, html {
+html {
   height: 100%;
+  background-color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #eee;
 }
 
-.main_container {
-    min-height: 90%;
-}
-
+/* MAP */
 #map {
-    height: 500px;
+  margin: auto;
+  height: 500px;
 }
+
+@media screen and (max-width: 1000px) {
+  #map {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  #map {
+    width: 980px;
+  }
+}
+
+/* Selection, Header, Footer */
+header {
+  font-size: 2.5em;
+  justify-content: center;
+  text-align: center;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+div #selection_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 5px 20px 5px; /*t, r, b, l*/
+}
+
+select {
+  background-color: #444;
+  color: #eee;
+  font-size: 1.3em;
+}
+
+option {
+  background-color: #444;
+  color: #eee;
+  font-size: 0.8em; /* Needs to be a little smaller than the select*/
+}
+
+#selectTitle {
+  font-size: 1.3em;
+  padding-right: 1em;
+}
+
+footer {
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  padding: 1em 0em;
+}
+
+footer a {
+  color: rgb(20, 231, 1);
+  font-size: 1em;
+  text-decoration: none; /* Don't underline link */
+}
+
+footer a:hover{
+  background-color: rgba(20, 231, 1, 0.3);
+}
+
+footer a:visited{
+  color: rgb(20, 231, 1);
+  text-decoration: none;
+}
+
+/* Plots */
+
+.plots_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto; /* Make sure it stays centered in page */
+}
+
+.plot {
+  border: 0.4em solid #939393;
+  margin: 1em;
+}
+
+/* Map Legend */
 
 .legend {
   color: #555;

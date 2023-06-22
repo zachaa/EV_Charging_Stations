@@ -19,11 +19,15 @@
 </head>
 <body>
     <div class="main_container">
+        <header>Electric Car Charging Stations in the US</header>
         <div id="map"></div>
         <hr>
-        <select id="selectState" onchange="optionChanged(this.value)">
-            <option value="USA">United States</option>
-        </select>
+        <div id="selection_row">
+            <div id="selectTitle">Select a State to view details:</div>
+            <select id="selectState" onchange="optionChanged(this.value)">
+                <option value="USA">United States</option>
+            </select>
+        </div>
 
         <div class="plots_container">
             <div class="plot" id="plotPowerLevels"></div>
@@ -31,7 +35,7 @@
             <div class="plot" id="plotOperators"></div>
             <div class="plot" id="plotStatus"></div>
         </div>
-
+        <footer>Data provided by: <a href="https://openchargemap.org/site">OpenChargeMap</a></footer>
     </div>
 
     <!-- Our JavaScript -->
