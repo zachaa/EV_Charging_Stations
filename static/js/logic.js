@@ -104,6 +104,15 @@ async function start() {
      let layout = {
          title: "Count of Stations powerlevels",
          barmode: "group",
+         xaxis: { 
+            title: "Power Level",
+            tickvals: [1,2,3,4]
+        },
+        yaxis: { 
+            title: "Total Count"
+        },
+    
+    
          //Include margins in the layout so the x-tick labels display correctly
          margin: {
              l: 50,
