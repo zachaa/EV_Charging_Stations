@@ -23,13 +23,16 @@
   <!-- Add Leaflet Heatmap Library -->
   <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
 
-
+  <!-- Full Screen Map button: https://github.com/Leaflet/Leaflet.fullscreen -->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 
 <body>
+  <header>Electric Charging Stations in the US</header>
   <div id="map"></div>
 
   <select id="selectState" onchange="optionChanged(this.value)">

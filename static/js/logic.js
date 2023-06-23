@@ -119,8 +119,9 @@ async function start() {
 
     // Creating the map object, google center of US lat/long
     let myMap = L.map("map", {
-        center: [37, -95],
-        zoom: 4
+        center: [37, -95.7],
+        zoom: 4,
+        fullscreenControl: {pseudoFullscreen: true} // true = fullscreen to page width and height
     });
 
     // Adding the tile layer
