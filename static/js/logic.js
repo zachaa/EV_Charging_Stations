@@ -95,10 +95,13 @@ async function start() {
     // Get the data needed for the plots
     let plottingData = createFilterData('USA');
 
-    // plot style colors
-    let colorBackground = "#222";
-    let colorPlotBackground = "black";
-    let colorFont = "#eee";
+    // plot style options
+    const colorBackground = "#222";
+    const colorPlotBackground = "black";
+    const colorFont = "#eee";
+    const titleFontSize = 26;
+    const axisTitleFontSize = 20;
+    const config = {responsive: true};
 
     // Status Bar Graph
     let tracestatus = {
@@ -111,17 +114,24 @@ async function start() {
         title: 'Status of Stations',
         xaxis: {
             title: 'Status',
-            ticktext: statustypes.map(status => status.Title),
-            tickfont: { size: 10 },
-            tickvals: [...Array(statustypes.length).keys()]
+            titlefont: { size: axisTitleFontSize },
+            ticktext: statustypes.map(status => status.Title.replace(" (Automated Status)", "")),
+            tickvals: [...Array(statustypes.length).keys()],
+            fixedrange: true
         },
-        yaxis: { title: 'log(Number of Stations)', type: 'log' },
-        margin: {t: 40, b: 120, l: 60, r: 60},
+        yaxis: {
+            title: 'log( Number of Stations )',
+            titlefont: { size: axisTitleFontSize },
+            type: 'log',
+            fixedrange: true
+        },
+        margin: {t: 50, b: 130, l: 60, r: 20},
         plot_bgcolor: colorPlotBackground,
         paper_bgcolor: colorBackground,
         font: { color: colorFont },
+        titlefont: { size: titleFontSize }
     }
-    Plotly.newPlot('statusplot', [tracestatus], layoutstatus);
+    Plotly.newPlot('statusplot', [tracestatus], layoutstatus, config);
 
     // Power Level Graph
     let trace1 = {
@@ -139,21 +149,24 @@ async function start() {
         barmode: "group",
         xaxis: {
             title: "Power Level",
+            titlefont: { size: axisTitleFontSize },
             tickvals: [1, 2, 3, 4],
             ticktext: ["Level 1", "Level 2", "Level 3", "Unknown"],
             fixedrange: true
         },
         yaxis: {
             title: "Total Count",
+            titlefont: { size: axisTitleFontSize },
             fixedrange: true
         },
-        margin: {t: 40, b: 50, l: 60, r: 60},
+        margin: {t: 50, b: 50, l: 60, r: 20},
         plot_bgcolor: colorPlotBackground,
         paper_bgcolor: colorBackground,
         font: { color: colorFont },
+        titlefont: { size: titleFontSize }
     };
     // Render the plot to the div tag with id "plot"
-    Plotly.newPlot("powerLevelsPlot", data, layout);
+    Plotly.newPlot("powerLevelsPlot", data, layout, config);
 
     // Top 15 Operators
     let traceOperators = [{
@@ -166,16 +179,23 @@ async function start() {
     }]
     let layoutOperators = {
         title: "Top 15 Operators",
-        margin: {t: 30, b: 40, l: 200, r: 60},
-        xaxis: {title: "Number of Stations",
-                fixedrange: true},
-        yaxis: {title: "Operators",
-                fixedrange: true},
+        margin: {t: 50, b: 50, l: 210, r: 20},
+        xaxis: {
+            title: "Number of Stations",
+            titlefont: { size: axisTitleFontSize },
+            fixedrange: true
+        },
+        yaxis: {
+            title: "Operators",
+            titlefont: { size: axisTitleFontSize },
+            fixedrange: true
+        },
         plot_bgcolor: colorPlotBackground,
         paper_bgcolor: colorBackground,
-        font: { color: colorFont }
+        font: { color: colorFont },
+        titlefont: { size: titleFontSize }
     }
-    Plotly.newPlot("plotOperators", traceOperators, layoutOperators)
+    Plotly.newPlot("plotOperators", traceOperators, layoutOperators, config)
 
     // Creating the map object, google center of US lat/long
     let chargeMap = L.map("map", {
@@ -206,7 +226,8 @@ async function start() {
     let heat = L.heatLayer(heatArray, {
         radius: 15,
         blur: 20,
-        minOpacity: 0.5
+        minOpacity: 0.4,
+        maxZoom: 15
     }).addTo(chargeMap);
 
     // Create layer group for Operators
@@ -217,7 +238,7 @@ async function start() {
         Operator: markerLayerOperator,
     }
 
-    L.control.layers(overlayMaps)
+    L.control.layers(overlayMaps, null, {collapsed: false})
         .addTo(chargeMap);
 
     // Create legend for the Operator Data

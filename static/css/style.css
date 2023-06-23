@@ -8,7 +8,7 @@ html {
 /* MAP */
 #map {
   margin: auto;
-  height: 500px;
+  height: 600px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -43,8 +43,23 @@ header {
   filter: invert(100%) hue-rotate(200deg);
 }
 
+.leaflet-control-attribution.leaflet-control {
+  background: #111;
+  color: #ccc
+}
+
+.leaflet-control-layers-list {
+  font-size: 1.3em;
+}
+
 .leaflet-container {
   background-color: #333; /*No bright flash */
+}
+
+/* Plots */
+div .plot {
+  border: .3em solid #111;
+  margin: 1em;
 }
 
 /* Select, Options and Footer  ================================  */
@@ -75,13 +90,12 @@ option {
 footer {
   justify-content: center;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 1em 0em;
 }
 
 footer a {
   color: rgb(20, 231, 1);
-  font-size: 1em;
   text-decoration: none; /* Don't underline link */
 }
 
@@ -96,14 +110,15 @@ footer a:visited{
 
 /* Map Legend ================================ */
 .legend {
-  color: #555;
-  font-family: Arial, Helvetica, sans-serif;
+  /* color: #EEE;
+  font-family: Arial, Helvetica, sans-serif; */
   font-weight: bold;
+  font-size: 1.2em;
   padding: 2px 8px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: #111;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  border: 1px solid #555;
+  border: 1px solid #aaa;
 }
 
 h3.legend_title {
