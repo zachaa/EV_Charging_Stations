@@ -2,14 +2,52 @@ html {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #222;
-  color: white;
+  color: #eee;
 }
 
+/* MAP */
 #map {
   margin: auto;
   height: 500px;
 }
 
+@media screen and (max-width: 1000px) {
+  #map {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  #map {
+    width: 980px;
+  }
+}
+
+/* Fancy Glowing Header*/
+header {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49FF18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49FF18;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0.5em;
+  -webkit-text-stroke: 1px #222;
+}
+
+/* Create a darkmode map */
+/* modified from: https://dev.to/deepakdevanand/leaflet-map-dark-theme-5ej0 */
+.leaflet-control-layers,
+.leaflet-control-fullscreen,
+.leaflet-control-zoom,
+.leaflet-popup-pane,
+.leaflet-tile-pane {
+  filter: invert(100%) hue-rotate(200deg);
+}
+
+.leaflet-container {
+  background-color: #333; /*No bright flash */
+}
+
+/* Select, Options and Footer  ================================  */
 div #selection_row {
   display: flex;
   flex-direction: row;
@@ -20,26 +58,6 @@ div #selection_row {
 #selectTitle {
   font-size: 1.3em;
   padding-right: 1em;
-}
-
-header {
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49FF18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49FF18;
-  font-size: 3em;
-  text-align: center;
-  padding-bottom: 0.5em;
-}
-
-/* Create a darkmode map */
-/* modified from: https://dev.to/deepakdevanand/leaflet-map-dark-theme-5ej0 */
-.leaflet-control-layers,
-.leaflet-control-fullscreen,
-.leaflet-control-zoom,
-.leaflet-tile-pane {
-  filter: invert(100%) hue-rotate(200deg);
-}
-
-.leaflet-container {
-  background-color: #333; /*No bright flash */
 }
 
 select {
@@ -74,4 +92,36 @@ footer a:hover{
 footer a:visited{
   color: rgb(20, 231, 1);
   text-decoration: none;
+}
+
+/* Map Legend ================================ */
+.legend {
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+h3.legend_title {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.legend_row {
+  padding: 4px, 2px;
+}
+
+.legend_color {
+  float: left;
+  width: 15px;
+  height: 15px;
+}
+
+.legend_text {
+  padding: 0px 2px 0px 20px;
 }
