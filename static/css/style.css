@@ -1,14 +1,77 @@
-body {
-  padding: 0px;
-  margin: 0px;
-}
-
-body,
 html {
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+  color: white;
 }
 
 #map {
   margin: auto;
   height: 500px;
+}
+
+div #selection_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 5px 20px 5px; /*t, r, b, l*/
+}
+
+#selectTitle {
+  font-size: 1.3em;
+  padding-right: 1em;
+}
+
+header {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49FF18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49FF18;
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+/* Create a darkmode map */
+/* modified from: https://dev.to/deepakdevanand/leaflet-map-dark-theme-5ej0 */
+.leaflet-control-layers,
+.leaflet-control-fullscreen,
+.leaflet-control-zoom,
+.leaflet-tile-pane {
+  filter: invert(100%) hue-rotate(200deg);
+}
+
+.leaflet-container {
+  background-color: #333; /*No bright flash */
+}
+
+select {
+  background-color: #444;
+  color: #eee;
+  font-size: 1.3em;
+}
+
+option {
+  background-color: #444;
+  color: #eee;
+  font-size: 0.8em; /* Needs to be a little smaller than the select*/
+}
+
+footer {
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  padding: 1em 0em;
+}
+
+footer a {
+  color: rgb(20, 231, 1);
+  font-size: 1em;
+  text-decoration: none; /* Don't underline link */
+}
+
+footer a:hover{
+  background-color: rgba(20, 231, 1, 0.3);
+}
+
+footer a:visited{
+  color: rgb(20, 231, 1);
+  text-decoration: none;
 }

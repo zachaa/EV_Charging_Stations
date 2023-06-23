@@ -6,19 +6,14 @@
   <title>Charging Stations in the US</title>
   
   <!-- External scripts and stylesheets -->
-
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
   <!-- Leaflet JavaScript code -->
-  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
-
-  <!-- D3 library -->
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   
   <!-- Add Leaflet Heatmap Library -->
   <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
@@ -32,15 +27,20 @@
 </head>
 
 <body>
-  <header>Electric Charging Stations in the US</header>
+  <header>EV Charging Stations in the US</header>
   <div id="map"></div>
 
-  <select id="selectState" onchange="optionChanged(this.value)">
-    <option value="USA">United States</option>
-  </select>
+  <hr>
+  <div id="selection_row">
+      <div id="selectTitle">Select a State to view details:</div>
+      <select id="selectState" onchange="optionChanged(this.value)">
+          <option value="USA">United States</option>
+      </select>
+  </div>
 
   <div id="powerLevelsPlot"></div>
-  <div id="statusplot"></div> 
+  <div id="statusplot"></div>
+  <footer>Data provided by: <a href="https://openchargemap.org/site">OpenChargeMap</a></footer>
 
   <!-- Our JavaScript -->
   <script type="text/javascript" src="static/js/states.js"></script>

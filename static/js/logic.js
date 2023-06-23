@@ -76,7 +76,8 @@ async function start() {
     let tracestatus = {
         x: [...Array(statustypes.length).keys()],
         y: Object.values(plottingdata.Status),
-        type: 'bar'
+        type: 'bar',
+        marker: {color: '#00F7FF'}
     };
 
     let layoutstatus = {
@@ -87,7 +88,10 @@ async function start() {
             tickfont: { size: 10 },
             tickvals: [...Array(statustypes.length).keys()]
         },
-        yaxis: { title: 'Number of Stations', type: 'log' }
+        yaxis: { title: 'Number of Stations', type: 'log' },
+        plot_bgcolor:"black",
+        paper_bgcolor:"#111",
+        font: {color: "white"},
     }
     Plotly.newPlot('statusplot', [tracestatus], layoutstatus);
 
@@ -96,31 +100,34 @@ async function start() {
         x: [1, 2, 3, 4],
         y: Object.values(plottingdata.PowerLevel),
         name: "State",
-        type: "bar"
+        type: "bar",
+        marker: {color: '#02B43A'}
     };
      //Create data array
      let data = [trace1]
      //Apply a title to the layout
      let layout = {
-         title: "Count of Stations powerlevels",
-         barmode: "group",
-         xaxis: { 
-            title: "Power Level",
-            tickvals: [1,2,3,4]
+        title: "Count of Stations powerlevels",
+        barmode: "group",
+        xaxis: { 
+           title: "Power Level",
+           tickvals: [1,2,3,4]
         },
         yaxis: { 
             title: "Total Count"
         },
-    
+        plot_bgcolor:"black",
+        paper_bgcolor:"#111",
+        font: {color: "white"},
     
          //Include margins in the layout so the x-tick labels display correctly
-         margin: {
-             l: 50,
-             r: 50,
-             b: 200,
-             t: 50,
-             pad: 4
-         }
+        margin: {
+            l: 50,
+            r: 50,
+            b: 200,
+            t: 50,
+            pad: 4
+        }
      };
      // Render the plot to the div tag with id "plot"
      Plotly.newPlot("powerLevelsPlot", data, layout);
