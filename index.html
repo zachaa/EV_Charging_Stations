@@ -30,15 +30,17 @@
 </head>
 
 <body>
-
-
-  
   <div id="map"></div>
 
-  <div id="plot"></div>
+  <select id="selectState" onchange="optionChanged(this.value)">
+    <option value="USA">United States</option>
+  </select>
 
+  <div id="powerLevelsPlot"></div>
   <div id="statusplot"></div> 
+
   <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/states.js"></script>
   <script type="text/javascript" src="static/js/logic.js"></script>
 </body>
 </html>

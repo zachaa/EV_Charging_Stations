@@ -48,9 +48,21 @@ function createfilterdata(state) {
 }
 
 
+function setSelectOptions() {
+    let dropDown = d3.select("#selectState");
+    states.forEach(state => {
+        dropDown.append("option")
+                .text(state.name)
+                .attr("value", state.abbreviation)
+    });
+}
+
+
 // Get the data with d3.
 // Use async function and await (command) to pull data without a promise, prioritize data pull
 async function start() {
+    setSelectOptions();
+
     stationdata = await d3.json("/data/reduced_data.json")
     let referencedata = await d3.json("/data/reduced_reference_data.json")
 
@@ -58,7 +70,7 @@ async function start() {
 
     console.log(statustypes);
 
-    let plottingdata = createfilterdata('TX');
+    let plottingdata = createfilterdata('USA');
 
     // Status Bar Graph
     let tracestatus = {
@@ -102,7 +114,7 @@ async function start() {
          }
      };
      // Render the plot to the div tag with id "plot"
-     Plotly.newPlot("plot", data, layout);
+     Plotly.newPlot("powerLevelsPlot", data, layout);
 
 
     // Creating the map object, google center of US lat/long
@@ -117,7 +129,6 @@ async function start() {
     }).addTo(myMap);
 
     // Filtering to lat/long
-
     let heatArray = [];
 
     for (let i = 0; i < stationdata.length; i++) {
@@ -130,6 +141,25 @@ async function start() {
         blur: 20,
         minOpacity: 0.5
     }).addTo(myMap);
+}
+
+function updateCharts(stateValue) {
+    let updatedData = createfilterdata(stateValue);
+
+    let powerLevelUpdateData = {
+        y: [Object.values(updatedData.PowerLevel)],
+    };
+    Plotly.restyle("powerLevelsPlot", powerLevelUpdateData)
+
+    let statusUpdate = {
+        y: [Object.values(updatedData.Status)]
+    };
+    Plotly.restyle("statusplot", statusUpdate)
+}
+
+function optionChanged(value) {
+    console.log(value);
+    updateCharts(value);
 }
 
 start();

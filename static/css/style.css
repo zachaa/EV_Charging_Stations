@@ -1,11 +1,14 @@
 body {
-    padding: 0px;
-    margin: 0px;
-  }
-  
-  #map,
-  body,
-  html {
-    height: 100%;
-  }
-  
+  padding: 0px;
+  margin: 0px;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+#map {
+  margin: auto;
+  height: 500px;
+}
