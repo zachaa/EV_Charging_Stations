@@ -1,3 +1,6 @@
+const urlStations = "https://raw.githubusercontent.com/zachaa/Project3/main/data/reduced_data.json";
+const urlReference = "https://raw.githubusercontent.com/zachaa/Project3/main/data/reduced_reference_data.json";
+
 let stationData;
 let referenceData;
 
@@ -87,8 +90,8 @@ async function start() {
     setSelectOptions();
 
     // load the two JSON files
-    stationData = await d3.json("/data/reduced_data.json");
-    referenceData = await d3.json("/data/reduced_reference_data.json");
+    stationData = await d3.json(urlStations);  // "/data/reduced_data.json"
+    referenceData = await d3.json(urlReference);  // "/data/reduced_reference_data.json"
 
     let statustypes = referenceData.StatusTypes;
 
