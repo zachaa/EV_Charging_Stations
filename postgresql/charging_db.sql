@@ -1,4 +1,4 @@
-CREATE TABLE "Stations" (
+CREATE TABLE Stations (
     "ID" Serial   NOT NULL,
     "Title" text   NOT NULL,
     "AddressLine1" text   NULL,
@@ -26,7 +26,7 @@ CREATE TABLE "Stations" (
      )
 );
 
-CREATE TABLE "ConnectionTypes" (
+CREATE TABLE ConnectionTypes (
     "ID" int   NOT NULL,
     "Title" text   NOT NULL,
     "FormalName" text    NULL,
@@ -37,7 +37,7 @@ CREATE TABLE "ConnectionTypes" (
      )
 );
 
-CREATE TABLE "CurrentTypes" (
+CREATE TABLE CurrentTypes (
     "ID" int   NOT NULL,
     "Title" text   NOT NULL,
     "Description" text   NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE "CurrentTypes" (
      )
 );
 
-CREATE TABLE "OperatorTypes" (
+CREATE TABLE OperatorTypes (
     "ID" int   NOT NULL,
     "Title" text   NOT NULL,
     "IsPrivateIndividual" BOOLEAN DEFAULT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE "OperatorTypes" (
      )
 );
 
-CREATE TABLE "UsageTypes" (
+CREATE TABLE UsageTypes (
     "ID" int   NOT NULL,
     "Title" text   NOT NULL,
     "IsPayAtLocation" BOOLEAN DEFAULT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE "UsageTypes" (
      )
 );
 
-CREATE TABLE "StatusTypes" (
+CREATE TABLE StatusTypes (
     "ID" int   NOT NULL,
     "Title" text   NOT NULL,
     "IsOperational" BOOLEAN DEFAULT NULL,
@@ -76,14 +76,14 @@ CREATE TABLE "StatusTypes" (
      )
 );
 
-ALTER TABLE "Stations" ADD CONSTRAINT "fk_Stations_OperatorID" FOREIGN KEY("OperatorID")
-REFERENCES "OperatorTypes" ("ID");
+ALTER TABLE Stations ADD CONSTRAINT "fk_Stations_OperatorID" FOREIGN KEY("OperatorID")
+REFERENCES OperatorTypes ("ID");
 
-ALTER TABLE "Stations" ADD CONSTRAINT "fk_Stations_UsageTypeID" FOREIGN KEY("UsageTypeID")
-REFERENCES "UsageTypes" ("ID");
+ALTER TABLE Stations ADD CONSTRAINT "fk_Stations_UsageTypeID" FOREIGN KEY("UsageTypeID")
+REFERENCES UsageTypes ("ID");
 
-ALTER TABLE "Stations" ADD CONSTRAINT "fk_Stations_StatusTypeID" FOREIGN KEY("StatusTypeID")
-REFERENCES "StatusTypes" ("ID");
+ALTER TABLE Stations ADD CONSTRAINT "fk_Stations_StatusTypeID" FOREIGN KEY("StatusTypeID")
+REFERENCES StatusTypes ("ID");
 
 SELECT * FROM connectiontypes;
 
