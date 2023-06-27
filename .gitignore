@@ -141,3 +141,8 @@ api_keys.py
 data/poi_data.json
 data/reference_data.json
 data/example.json
+data/reduced_data.sqlite
+favicon.ai
+favicon-48.png
+favicon-32.png
+favicon.ico

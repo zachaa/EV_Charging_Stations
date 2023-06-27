@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="16" y1="31.5" x2="16" y2="1.5">
+		<stop  offset="0" style="stop-color:#00A000"/>
+		<stop  offset="0.15" style="stop-color:#00E100"/>
+		<stop  offset="0.7" style="stop-color:#00E100"/>
+		<stop  offset="0.95" style="stop-color:#000000;stop-opacity:0"/>
+	</linearGradient>
+	<rect x="5.5" y="1.5" fill="url(#SVGID_1_)" width="21" height="30"/>
+	<path fill="#666666" d="M26,2v29H6V2H26 M27,1H5v31h22V1L27,1z"/>
+</g>
+<polygon fill="#FFC20F" points="20,2 7,20 15,19 12,31 25,12 17,13 "/>
+<g>
+	<polygon fill="#666666" points="23,0 10,0 10,1 23,1 23,0 	"/>
+</g>
+</svg>
