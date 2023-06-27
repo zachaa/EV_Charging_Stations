@@ -1,4 +1,3 @@
-import sqlite3
 import pandas as pd
 from sqlalchemy import Column, Integer, Float, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -6,6 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
 Base = declarative_base()
+
 
 class ReducedData(Base):
     __tablename__ = 'reduced_data'
@@ -32,6 +32,7 @@ class ReducedData(Base):
     AddressLine2 = Column(String)
     DatePlanned = Column(String)
 
+
 class SQLiteManager:
     def __init__(self, database_path):
         self.database_path = database_path
@@ -54,6 +55,7 @@ class SQLiteManager:
 
     def close_connection(self):
         self.session.close()
+
 
 # Usage example
 database_path = "data/reduced_data.sqlite"

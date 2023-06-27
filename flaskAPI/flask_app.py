@@ -1,11 +1,8 @@
 from flask import Flask, jsonify
-import numpy as np
-import sqlalchemy
 
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-
+from sqlalchemy import create_engine
 
 
 # Database Setup
@@ -35,10 +32,10 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return (
-        f"Welcome to the Electric Charge Station Finder Tool Home Page!<br/>"
-        f"Available Routes:<br/>"
-        f"/api/v1.0/chargers_by_city/<town><br/>"
-        f"/api/v1.0/chargers_by_state/<state>"
+        "Welcome to the Electric Charge Station Finder Tool Home Page!<br/><br/>"
+        "Available Routes:<br/>"
+        "/api/v1.0/chargers_by_city/<town><br/>"
+        "/api/v1.0/chargers_by_state/<state>"
     )
 #Query results
 
@@ -107,8 +104,6 @@ def chargers_by_state(state):
         state_address_list.append(state_address)
     #Return JSON
     return jsonify(state_address_list)
-
-
 
 
 ######################################################
