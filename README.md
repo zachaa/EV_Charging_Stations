@@ -41,7 +41,7 @@ Steps to Use:
 
 The website has a leaflet map with two different layers. There are also three bar charts that can have their data filtered by state.
 
-### [Link to Website](https://zachaa.github.io/Project3/)
+### [Link to Website](https://zachaa.github.io/EV_Charging_Stations/)
 
 ![Preview of website](images/Website_Preview.png)
 
